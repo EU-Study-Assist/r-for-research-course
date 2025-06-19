@@ -1,0 +1,89 @@
+---
+title: "CAPSTONE PROJECT"
+subtitle: "Zama Fruit Store"
+format:
+  html:
+    theme: "cerulean"
+title-slide-attributes: 
+  data-background-image: data-structures.jpg
+  data-background-opacity: "0.3"
+filters: 
+  - webr
+---
+
+:::{.callout-important}
+You're strongly encouraged to complete all the tasks below on your own.
+Since these are foundational skills that should become second nature, please avoid using AI tools at this stage. Instead, rely on general web searches and the official R documentation—both are excellent for building real understanding.
+
+If you get stuck and must use AI, do so carefully. Be sure to read and understand each step of the solution, rather than copying it blindly.
+
+You may complete the tasks using RStudio on your computer or by running the R code blocks provided on this web page -— whichever works best for you.
+:::
+
+
+# Introduction {.smaller}
+Zama Fruit Store (ZFS) is located in Qatar 🇶🇦 and is one of the largest fruit retailers in the country. It imports a wide variety of fruits from countries around the world. ZFS has recently restocked its inventory with a new shipment.
+
+You’ve just been hired as a research analyst at ZFS and have been asked to carry out an ad-hoc management based on the latest inventory of the store. 
+Below are some of the set tasks.
+
+## Task 1
+You've been asked to **Save the fruits available according to their country of origin**.
+
+Origin | Fruit |
+:------ | -----:|
+Ukraine | grapes, peach, strawberries, apples, banana |
+Nigeria | banana, coconut, apples, mango, orange, pineapple, plantain | 
+Vietnam | coconut, banana, watermelon, mango, pineapple |
+Guatemala | watermelon, mango, avocado, plantain, coconut, banana |
+Brazil | kiwi, mango, passion fruit, Pear, coconut, banana |
+
+: Fruits imported to ZFS according to their country of  origin.
+
+```{webr-r}
+
+
+```
+
+
+# Task II
+Using the newly created vectors, create a matrix. with column name being the individual countries. Determine an appropriate dimension for your matrix. Is it possible to create a correct matrix?
+
+```{webr-r}
+
+```
+
+
+## Task II
+
+The prices of the variable fruits have been given.
+
+Fruit |  |Cost | 
+:--- | -- |---: |
+grapes |🍇| 0.6 |
+peach |🍑| 0.4 |
+strawberries |🍓| 1.3 |
+apples |🍏| 2 |
+banana |🍌| 1.2 |
+coconut |🥥| 2.1 |
+mango |🥭| 2.4 |
+orange |🍊| 1.8 |
+pineapple |🍍| 5 |
+plantain |🌙| 1.7 |
+pumpkin |🎃| 0.9|
+watermelon |🍉| 2.2 |
+avocado |🥑| 4.2 |
+kiwi |🥝| 3.1 |
+Pear |🍐| 4.3 |
+
+: Fruits imported by Zama Fruit Store an their price.
+
+## Task {.smaller}
+
+- Generate a series of vectors, where each vector explicitly combines a country and the fruits it exports. Store these vectors using the naming convention `country_export`. For example, a vector representing Venezuela's export would be named `venezuela_exort`.
+
+- Construct a matrix named `zama_fruit_import` by combining the `country_export` vectors you just created.
+
+- Develop a dataframe that clearly presents the names of the fruits and their associated costs.
+
+- Finally, build a dataframe that includes columns for the `origin country`, the `fruit name`, and their respective `prices`. Ensure that you utilize the individual vectors created in the very first step for this task.
