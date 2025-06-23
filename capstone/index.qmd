@@ -156,38 +156,61 @@ Create a new column with the name `quantity` and update the rows according to th
 Given that the selling price is 50% higher than the wholesale cost price:
 
 - Calculate the selling price for each fruit-country combination
-- Calculate the total revenue potential for each country for each fruit
-- calculate the total revenue for ZFS store
-- calculate the total cost of products
-- Calculate the total profit potential for each country
-Which country generates the highest total revenue?
-Which country generates the highest total profit?
+- Calculate the revenue potential for each country for each fruit
+- What is the total revenue for ZFS store
+- calculate the total cost of the products products
+
+```{webr}
+
+```
+
+# Extras 
+
+- Which country generates the highest total revenue?
+- Which country generates the highest total profit?
 
 
+:::{.callout-note}
+# Project Submission Instructions
+**Interactive Platform Notice:** This is an interactive learning platform where you can practice and test your R code in real-time. However, final submissions are not processed through this platform.
 
+## How to Submit Your Work:
 
+1. **Save Your Solutions**: After completing all tasks on this platform, copy your working R code solutions into a single R script file.
+2. **File Requirements**:
+    
+    - Save as: *firstname_lastname_zfs_capstone.R*
+    - Example: *sarah_conor_zfs_capstone.R*
+    - Use lowercase letters and underscores only (no spaces or special characters)
+3. **Script Format Requirements**:
 
+```{r}
+#| eval: false
 
+# ================================================
+# ZAMA FRUIT STORE CAPSTONE PROJECT
+# Student Name: [Your Full Name]
+# Course: [Course Code]
+# Submission Date: [Date]
+# ================================================
 
+# TASK I: Creating Master Fruit Inventory
+# Your code here...
 
+# TASK II: Country Specific Analysis
+# Your code here...
 
+# Continue for all tasks...
+```
 
+4. **Email Submission**:
 
+    - Send your completed R script to: training@eustudyassist.com
+    -  Subject line: ZFS Capstone Submission - [Your Name]
+    - Include your student ID in the email body
+5. **What You'll Receive**:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    - Confirmation of submission receipt
+    - Model solutions via email for self-assessment
+    - Feedback on your submission (within 5-7 business days)
+:::
