@@ -9,26 +9,28 @@ title-slide-attributes:
   data-background-opacity: "0.3"
 filters: 
   - webr
+engine: knitr
 ---
 
 :::{.callout-important}
-You're strongly encouraged to complete all the tasks below on your own.
-Since these are foundational skills that should become second nature, please avoid using AI tools at this stage. Instead, rely on general web searches and the official R documentation—both are excellent for building real understanding.
+
+You're strongly encouraged to complete all the tasks below on your own. Since these are foundational skills that should become second nature, please avoid using AI tools at this stage. Instead, rely on general web searches and the official R documentation—both are excellent for building real understanding.
 
 If you get stuck and must use AI, do so carefully. Be sure to read and understand each step of the solution, rather than copying it blindly.
+You may complete the tasks using RStudio on your computer or by running the R code blocks provided on this web page — whichever works best for you.
 
-You may complete the tasks using RStudio on your computer or by running the R code blocks provided on this web page -— whichever works best for you.
 :::
 
 
-# Introduction {.smaller}
-Zama Fruit Store (ZFS) is located in Qatar 🇶🇦 and is one of the largest fruit retailers in the country. It imports a wide variety of fruits from countries around the world. ZFS has recently restocked its inventory with a new shipment.
+# INTRODUCTION
+**Zama Fruit Store (ZFS)** is located in Qatar 🇶🇦 and is one of the largest fruit retailers in the country. It imports a wide variety of fruits from countries around the world. ZFS has recently restocked its inventory with a new shipment.
+You've just been hired as a research analyst at ZFS and have been asked to carry out an ad-hoc analysis based on the latest inventory of the store.
+Below are your assigned tasks.
 
-You’ve just been hired as a research analyst at ZFS and have been asked to carry out an ad-hoc management based on the latest inventory of the store. 
-Below are some of the set tasks.
+# TASKS
 
-## Task 1
-You've been asked to **Save the fruits available according to their country of origin**.
+## Task I: Creating a Master Fruit Inventory
+Create a single variable containing all the fruits coming into ZFS from the table below.
 
 Origin | Fruit |
 :------ | -----:|
@@ -40,23 +42,51 @@ Brazil | kiwi, mango, passion fruit, Pear, coconut, banana |
 
 : Fruits imported to ZFS according to their country of  origin.
 
-```{webr-r}
 
+```{webr}
+
+```
+
+### Analysis Question
+
+Using the variable created above, answer the following:
+
+- how many types of fruits are imported by ZFS.
+- Create a frequency table of the fruits. 
+- Which fruit(s) is/are imported from only one of the region?
+- Which fruit(s) is/are imported from all the regions?
+- Which fruit has the highest number of characters (including spaces)?
+- Which fruit has the lowest number of characters (including spaces)?
+
+
+```{webr}
 
 ```
 
 
-# Task II
-Using the newly created vectors, create a matrix. with column name being the individual countries. Determine an appropriate dimension for your matrix. Is it possible to create a correct matrix?
+## Task II: Country Specific Tasks
+Create separate vectors for each country's fruit exports to ZFS.
 
 ```{webr-r}
 
 ```
 
 
-## Task II
+### Comparative Analysis Questions
+Using the country vectors created above, answer the following:
 
-The prices of the variable fruits have been given.
+- Is the number of distinct fruits imported from Ukraine greater than that of Brazil?
+- Is the number of fruits imported from Vietnam less than that of Nigeria?
+- Is the number of fruits imported from Brazil equal to that imported from Guatemala?
+- From which countries is coconut exported? Print the countries.
+- Which country has the highest number of fruit exports?
+- Which fruit(s) is/are common to all countries?
+
+> Read on apply family of R, and on the Reduce function. You will be required to create a list here
+
+## Task III
+
+The cost of the different fruits have been given below.
 
 Fruit |  |Cost | 
 :--- | -- |---: |
@@ -76,14 +106,88 @@ avocado |🥑| 4.2 |
 kiwi |🥝| 3.1 |
 Pear |🍐| 4.3 |
 
-: Fruits imported by Zama Fruit Store an their price.
+: Fruits imported by ZFS and their price.
 
-## Task {.smaller}
+Given this additional data, create a data frame of ZFS inventory. The data frame should look like this:
 
-- Generate a series of vectors, where each vector explicitly combines a country and the fruits it exports. Store these vectors using the naming convention `country_export`. For example, a vector representing Venezuela's export would be named `venezuela_exort`.
+Origin | Fruit | Cost|
+:-------| ----- | -------: |
+Ukraine| Grapes |0.6 |
+Ukraine| Peach | 0.4 |
+...... | ..... | ... |
+Brazil| Banana | 1.2 |
 
-- Construct a matrix named `zama_fruit_import` by combining the `country_export` vectors you just created.
+: Sample ZFS data frame
 
-- Develop a dataframe that clearly presents the names of the fruits and their associated costs.
+> Use ifelse, or if and else combined with the for loops.
 
-- Finally, build a dataframe that includes columns for the `origin country`, the `fruit name`, and their respective `prices`. Ensure that you utilize the individual vectors created in the very first step for this task.
+```{webr}
+
+```
+
+
+Print the first 6 rows of the data
+```{webr}
+
+```
+
+Print the last 6 rows of the data
+```{webr}
+
+```
+
+
+## Task IV
+The quantity of fruits imported into ZFS is dependent on the country of export. Below is an outline of the quantity exported from each country.
+
+- Ukraine, 150 per fruit
+- Nigeria, 318 per fruit
+- Vietnam, 347 per fruit
+- Guatemala, 197 per fruit
+- Brazil, 237 per fruit
+
+Create a new column with the name `quantity` and update the rows according to the country of origin
+
+```{webr}
+
+```
+
+### Business Analysis Questions - Part A
+Given that the selling price is 50% higher than the wholesale cost price:
+
+- Calculate the selling price for each fruit-country combination
+- Calculate the total revenue potential for each country for each fruit
+- calculate the total revenue for ZFS store
+- calculate the total cost of products
+- Calculate the total profit potential for each country
+Which country generates the highest total revenue?
+Which country generates the highest total profit?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
