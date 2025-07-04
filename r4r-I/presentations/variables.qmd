@@ -1,0 +1,67 @@
+---
+title: "Variables"
+format:
+  revealjs:
+    theme: "dark"
+    chalkboard: true
+filters:
+  - webr
+---
+  
+## What are Variables?
+  
+Variables are labels used to refer to and store information or data you want to use later.
+  
+:::: {.columns}
+
+::: {.column}
+### Values
+
+![Farm Produce](https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+:::
+
+::: {.column}
+### Variables
+
+![Labels / Bags](https://images.pexels.com/photos/7263007/pexels-photo-7263007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1){height=330}
+:::
+
+::::
+
+
+## 
+
+```{webr-r}
+
+```
+
+
+## Environments
+
+:::: {.columns}
+
+::: {.column}
+- **Global Environments**: Available in all environments
+
+![A House](https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+:::
+
+::: {.column}
+
+- **Local**: Available in a specific environment
+
+![A Room](stay-out.jpeg){height=330}
+
+:::
+
+::::
+
+# SEE YOU IN THE NEXT LESSON
+
+
+
+
+
+
+
+
