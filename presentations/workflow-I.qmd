@@ -1,0 +1,19 @@
+---
+title: "R Workflow"
+subtitle: "Organizing Your Work for Max Efficiency"
+format: 
+  revealjs: 
+    theme: "sky"
+---
+
+## What you'll learn
+:::{.incremental}
+- file organization:
+  - Naming files
+  - Internal structure organization
+    - naming variables
+    - naming functions
+    - sectioning and comments
+    
+- Making use of R scripts and R Project
+:::

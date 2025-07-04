@@ -1,0 +1,71 @@
+---
+title: "Zama Fruit Store"
+subtitle: "CAPSTONE PROJECT"
+format:
+  html:
+    theme: "cerulean"
+title-slide-attributes: 
+  data-background-image: data-structures.jpg
+  data-background-opacity: "0.3"
+filters: 
+  - webr
+---
+:::{.callout-important}
+You are encouraged to do all the tasks below by yourself. Since this is the basics and should be ingrained in you, you are discouraged from using AI. General web search and reading documentations are highly encouraged. If you feel stuck, use AI, but ensure you read through the steps while using AI. 
+
+You can use RStudio on your local machine, or use the R blocks of code provided on this web page. Either is fine.
+:::
+
+
+# Introduction {.smaller}
+Zama Fruit Store (ZFS) is located in Qatar 🇶🇦 and is one of the biggest fruit store in the country. It imports a lot of fruits from different countries of the world. ZFS recently stock up on its inventory with its latest shipment. You've recently being hire as a data analyst by ZFS and have been requested to undertake an ad-hoc analysis. 
+
+## Tasks
+Origin | Fruit |
+:------ | -----:|
+Ukraine | grapes, peach, strawberries, apples, banana |
+Nigeria | banana, coconut, apples, mango, orange, pineapple, plantain | 
+Venezuela | coconut, banana, watermelon, mango, olive |
+Guatemala | watermelon, mango, avocado, plantain, coconut |
+Brazil | kiwi, mango, passion fruit, Pear, coconut, banana |
+
+: Fruits imported to Zama store according to their country of  origin.
+
+```{webr-r}
+
+```
+
+
+## Fruit Price {.smaller .scrollable}
+
+For the sake of example, the price of the fruits has been kept the same regardless  of their country of origin. In real life, this is not the case.
+
+Fruit |  |Cost | 
+:--- | -- |---: |
+grapes |🍇| 0.6 |
+peach |🍑| 0.4 |
+strawberries |🍓| 1.3 |
+apples |🍏| 2 |
+banana |🍌| 1.2 |
+coconut |🥥| 2.1 |
+mango |🥭| 2.4 |
+orange |🍊| 1.8 |
+pineapple |🍍| 5 |
+plantain |🌙| 1.7 |
+Olive |🫒| 0.9 |
+watermelon |🍉| 2.2 |
+avocado |🥑| 4.2 |
+kiwi |🥝| 3.1 |
+Pear |🍐| 4.3 |
+
+: Fruits imported by Zama Fruit Store an their price.
+
+## Task {.smaller}
+
+- Generate a series of vectors, where each vector explicitly combines a country and the fruits it exports. Store these vectors using the naming convention `country_export`. For example, a vector representing Venezuela's export would be named `venezuela_exort`.
+
+- Construct a matrix named `zama_fruit_import` by combining the `country_export` vectors you just created.
+
+- Develop a dataframe that clearly presents the names of the fruits and their associated costs.
+
+- Finally, build a dataframe that includes columns for the `origin country`, the `fruit name`, and their respective `prices`. Ensure that you utilize the individual vectors created in the very first step for this task.
