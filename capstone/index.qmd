@@ -206,7 +206,7 @@ Given that the selling price is 50% higher than the wholesale cost price:
 4. **Email Submission**:
 
     - Send your completed R script to: training@eustudyassist.com
-    -  Subject line: ZFS Capstone Submission - [Your Name]
+    - Subject line: ZFS Capstone Submission - [Your Name]
     - Include your student ID in the email body
 5. **What You'll Receive**:
 
