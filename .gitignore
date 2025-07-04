@@ -48,7 +48,6 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
-presentations/
 capstone/capstone-solution.R
 
 exerc*
