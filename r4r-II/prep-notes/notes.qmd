@@ -30,6 +30,17 @@ For data set, there are some common file format such as:
 - others: `.shp`, `.hdsf`, `.sav`, and many more.
 
 ### Importing Data
+Data is imported into R base on the file type you are dealing with. We will cover some of the file types you come across when working with data in R.
+
+#### Plain-text data
+Plain text are flat files and is one of the most common form in which data is stored. You can use base R's util package to handle importation of data or external libraries. In this course we will be making use of external libraries, specificallly the `readr` package. To install `readr`, copy and run the code belw:
+
+```{r}
+#| eval:
+
+install.packages('readr')
+```
+
   - Plain-text data
   - Spreadsheet
   - Web API
