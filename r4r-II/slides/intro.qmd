@@ -1,0 +1,21 @@
+---
+title: "Introduction to Importing Data into R"
+format: 
+  revealjs:
+    theme: "sky"
+---
+:::{.incremental}
+- Understanding External data
+    - Data Sources
+    - Data Formats
+- Importing Data into R
+    - Flat files
+    - Spreadsheet
+    - API
+    - Web Scraping
+- Document Creation
+    - Website/Blog creation
+    - Creating reports
+    - Creating manuscripts
+- Capstone Project
+:::
