@@ -1,0 +1,18 @@
+.center {
+    text-align: center;
+}
+
+.center-img {
+    width: 50%;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.img {
+    border: 10px solid #ddd;
+    border-radius: 16px;
+}
+
+.backgrounds {
+    filter: blur(5px);
+}
