@@ -1,21 +1,111 @@
 ---
-title: "Introduction to Importing Data into R"
+title: ""
+subtitle: ""
 format: 
   revealjs:
     theme: "sky"
+    center-title-slide: true
+    smaller: true
+    transition: slide
+    css: styles.css
+    scrollable: true
+logo: "images/favicon.png"
 ---
-:::{.incremental}
-- Understanding External data
-    - Data Sources
-    - Data Formats
-- Importing Data into R
-    - Flat files
-    - Spreadsheet
-    - API
-    - Web Scraping
-- Document Creation
-    - Website/Blog creation
-    - Creating reports
-    - Creating manuscripts
-- Capstone Project
+
+##  {.center background-image="images/sage.png"}
+
+![](images/sage.png){.img}
+
+
+##  {.center background-image="https://upload.wikimedia.org/wikipedia/commons/c/cb/Ancient_Egypt_Papyrus_Scroll_of_the_Dead_%2828671122851%29.jpg"}
+
+:::: {.columns}
+::: {.column}
+![](https://upload.wikimedia.org/wikipedia/commons/5/54/Clay_Tablet_-_Louvre_-_AO29562_%28cropped%29.jpg){.img}
 :::
+
+::: {.column}
+![](https://upload.wikimedia.org/wikipedia/commons/c/cb/Ancient_Egypt_Papyrus_Scroll_of_the_Dead_%2828671122851%29.jpg){.img}
+:::
+::::
+
+
+
+## {.center}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Conserve_Paper_But_Save_Historical_Records..._-_DPLA_-_491e195cc1aa20581f313b6263cac09b.jpg/960px-Conserve_Paper_But_Save_Historical_Records..._-_DPLA_-_491e195cc1aa20581f313b6263cac09b.jpg?20250113213118){.img}
+
+
+## {.center}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Punch_card_1.jpg/960px-Punch_card_1.jpg?20210104065229){.img}
+
+
+## {.center background-image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Floppy_disk_2009_G1.jpg/640px-Floppy_disk_2009_G1.jpg"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Floppy_disk_2009_G1.jpg/640px-Floppy_disk_2009_G1.jpg){.img}
+
+
+## {.center}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Database-postgres.svg/640px-Database-postgres.svg.png){.img}
+
+
+## {.center background-image="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Web_Page.png/960px-Web_Page.png?20111010104154"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Web_Page.png/960px-Web_Page.png?20111010104154){.img}
+
+## {.center background-image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Cloud_Connection.png/640px-Cloud_Connection.png"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Cloud_Connection.png/640px-Cloud_Connection.png){.img}
+
+
+## {.center background-image="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Google_Glass_detail.jpg/640px-Google_Glass_detail.jpg"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Galaxy_Watch.jpeg/640px-Galaxy_Watch.jpeg){.img}
+
+## What we'll be Learning {.center}
+
+::::: columns
+::: {.column .incremental}
+-   Data Formats
+-   Importing Data into R
+    -   Flat files
+    -   Spreadsheet
+    -   API
+    -   Web Scraping
+-   Capstone Project
+:::
+
+::: column
+![](images/r-data-sources.png)
+:::
+:::::
+
+## Data {.center}
+- [National Resource Use Monitoring](https://research.fs.usda.gov/products/dataandtools/national-resource-use-monitoring-data-downloads)
+![](images/nrum.png){.img}
+
+- [International Council for the Exploration of the Sea](https://www.ices.dk/data/dataset-collections/Pages/Fish-catch-and-stock-assessment.aspx)
+![](images/ices-data.png){.img}
+
+
+## Capstone PROJECT {.center}
+
+- Scraping [Wikipedia data](https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population) ![Wkipedia Data](images/wikipedia.png){.img}
+
+## Capstone PROJECT {.center}
+-   Get Data from API [Open Mateo](https://open-meteo.com/) ![Open](images/open-mateo.png){.img}
+
+# GETTING DATA INTO R
+
+## Your Teacher {.center}
+
+:::: {.columns}
+
+::: {.column}
+- Olamide Adu
+- Founder of EU StudyAssist
+:::
+
+:::{.column}
+
+<img src="https://blog.olamideadu.com/image/avatar.jpg" alt="Iamge of Olamide Adu" class="center-img"/>
+
+:::
+
+::::
