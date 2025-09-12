@@ -1,0 +1,145 @@
+---
+title: ""
+subtitle: ""
+format: 
+  revealjs:
+    theme: "sky"
+    center-title-slide: true
+    smaller: true
+    transition: slide
+    css: styles.css
+    incremental: true
+    lightbox: true
+logo: "images/favicon.png"
+filters: 
+  - webr
+---
+
+# FILE FORMATS 
+![](https://plus.unsplash.com/premium_vector-1724652487429-69bcd389b930?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D){width="50%"}
+
+##  
+:::: {.columns}
+
+::: {.column}
+-  The structure or way data is organized and encoded within a computer file, dictating how applications should interpret and display its contents.
+
+- File format affects the size, quality, and compatibility with different software
+
+- These formats determine a file's characteristics, such as how text is stored in a Word document (like `.docx`) or how images are encoded in a file (like `.jpg`)
+
+- To recognize a file format, you can identify it with its `file extension`.
+:::
+
+::: {.column}
+![](images/formats.png){.img width="80%" fig-align="center"}
+:::
+
+::::
+
+
+## File Extensions {background-image="images/file-types-2.png.png" background-size="50%"}
+
+- file extension is the suffix at the end of a file's name.
+- They usually appear after the `dot` or `period` in a file's name.
+
+##
+![The look of a File Manager](images/file-format.png){.img}
+
+![Example of a file name](images/venessa.jpg){.img}
+
+
+##
+![](images/file-format-breakdown.jpg){width="70%" fig-align="center" .img}
+
+## 
+::: {.columns}
+::: {.column width="33%"}
+### Images
+- jpg
+- png
+- gif
+:::
+::: {.column width="33%"}
+### Audio
+- mp3
+- flac
+- aac
+:::
+::: {.column width="33%"}
+### Video
+- mp4
+- mov
+- avi
+:::
+::: 
+
+- Exercise
+write out 2 additional format for image, audio and video files
+
+```{webr-r}
+
+```
+
+## 
+
+```{webr-r}
+
+```
+For the following file names, categorize them into image, video or audio
+  
+:::: {.columns}
+::: {.column width="33.3%"}
+
+- dennis.webp
+
+- interview-prep.flac
+
+- facebook.svg
+
+- time-in-estonia.3gp
+
+- richest-man-in-babylon.m4b
+:::
+::: {.column width="33.3%"}
+
+- granny-prayer.ogg
+
+- love-yours.m4a
+
+- audition-11.mkv
+
+- training-scotland-yard.webm
+
+- yuji-itadori.heif
+:::
+::: {.column width="33.3%"}
+
+- pain-vs-kakashi.wmv
+
+- all_men_gone.flv
+
+- biology-lecture-5.amr
+
+- ndvi-er4rss-332.tiff
+
+- logo.bmp
+:::
+::::
+ 
+##
+:::: {.columns}
+
+::: {.column width="40%"}
+![Windows User](https://images.pexels.com/photos/18641167/pexels-photo-18641167.jpeg){height="80%".img}
+:::
+
+::: {.column width="0%a"}
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3ZhM3R3MTd4anloeDRwMDB4ZHNvam1tdjUzNWtzOHh5OHI1eDdlcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kbUXGJHxS80O1GJwEx/giphy.gif){width="90%" .img}
+:::
+
+::::
+
+#
+
+![](https://images.pexels.com/photos/40185/mac-freelancer-macintosh-macbook-40185.jpeg)
