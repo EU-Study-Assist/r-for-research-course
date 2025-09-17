@@ -1,0 +1,16 @@
+---
+title: ""
+subtitle: ""
+format: 
+  revealjs:
+    theme: "sky"
+    center-title-slide: true
+    smaller: true
+    transition: slide
+    css: styles.css
+    incremental: true
+    lightbox: true
+logo: "images/favicon.png"
+filters: 
+  - webr
+---
