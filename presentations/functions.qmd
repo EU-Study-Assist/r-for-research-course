@@ -1,0 +1,48 @@
+---
+title: "FUNCTIONS"
+format: revealjs
+theme: dark
+---
+## Short Recap 
+
+::: {.incremental}
+- c()
+- as.integer(), as.character(), ....
+- is.character(), is.factor() ....
+- factor(), ordered(), levels()
+- length()
+:::
+
+# What are Functions 
+
+::: {.incremental}
+> They are reusable blocks of codes that performs a specific task
+:::
+
+## Remember the Knife
+![Yup!!! This Knife](https://images.pexels.com/photos/4226864/pexels-photo-4226864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+
+## Various Forms of Cutting {.scrollable}
+:::: {.columns}
+
+::: {.column}
+![Dicing](https://images.pexels.com/photos/4198169/pexels-photo-4198169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1){height=500}
+:::
+
+::: {.column}
+![Chopping](https://images.pexels.com/photos/5677300/pexels-photo-5677300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1){height=500}
+:::
+
+::: {.column}
+![Slicing](https://images.pexels.com/photos/2491272/pexels-photo-2491272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1){height=500}
+:::
+
+::: {.column}
+![Peeling](https://images.pexels.com/photos/8249137/pexels-photo-8249137.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1){height=500}
+:::
+
+::::
+
+## 
+
+![](https://images.pexels.com/photos/28957284/pexels-photo-28957284/free-photo-of-spooky-halloween-witch-holding-apple-portrait.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1){fig-align="center"}

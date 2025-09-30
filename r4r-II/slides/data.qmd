@@ -1,0 +1,133 @@
+---
+title: ""
+subtitle: ""
+format: 
+  revealjs:
+    theme: "sky"
+    center-title-slide: true
+    smaller: true
+    transition: slide
+    css: styles.css
+    lightbox: true
+logo: "images/favicon.png"
+---
+# Data Formats 📊 {background-image="images/data-formats.png" .center}
+
+## Tabular Data {.center}
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGJ3Ymg2bjYybGFxejFoNWdzbmdhczhmMDMwa3Q1YmYwNWVybW56biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mFWnCCvdfwKWEow3z4/giphy.gif){width="70%"}
+
+##
+
+### Flat Files 
+- TXT
+- CSV (Comma Separated Files)
+- TSV (Tab Separated Files)
+
+```{r}
+#| echo: false
+
+writeLines(
+  "  year,area,item,element,unit,volume_m3,class
+  1961,Afghanistan,Roundwood,Production,m3,1354291,Industrial Roundwood
+  1961,Afghanistan,Roundwood - coniferous,Production,m3,562596,Industrial Roundwood
+  1961,Argentina,Sawnwood,Import Quantity,m3,880800,Sawnwood and Veneer Logs
+  1961,Argentina,Sawnwood,Export Quantity,m3,3400,Sawnwood and Veneer Logs
+  1961,China - Hong Kong SAR,Other industrial roundwood,Import Quantity,m3,2100,Industrial Roundwood
+  1961,China - Hong Kong SAR,Other industrial roundwood all species (export/import - 1961-1989),Import Quantity,m3,2100,Industrial Roundwood
+  1961,China - Hong Kong SAR,Sawnwood,Production,m3,130000,Sawnwood and Veneer Logs
+  1961,China - Hong Kong SAR,Sawnwood,Import Quantity,m3,49800,Sawnwood and Veneer Logs
+  "
+)
+```
+
+##
+### Spreadsheets
+- xlsx, xls (MS Excel files)
+- gsheet (Googlesheet)
+- ods (Open Document Spreadsheet)
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnVoaWk5OGNjZG5wODFyN3NscTg2NmFqZGE5NzFwb2ltM3Npd2hqMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/X9dSqwYqQp9DO/giphy.gif){width="70%" fig-align="center" .img}
+
+## Structure and Semi-structured
+
+### JSON
+- JavaScript Object Notation
+- Lightweight, human-readable data format 
+- Used for web APIs and configuration files.
+
+```json
+{
+  "name": "Jane Doe",
+  "age": 30,
+  "isStudent": false,
+  "courses": ["History", "Statistics"]
+}
+```
+
+##
+### XML
+- Extensible Markup Language
+- Structured text file that organizes data into a tree-like hierarchy of elements
+
+```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <library>
+      <book id="bk001">
+          <title>The XML Handbook</title>
+          <author>Charles F. Goldfarb</author>
+          <genre>Computer</genre>
+          <price>49.99</price>
+      </book>
+      <book id="bk002">
+          <title>Learning XML</title>
+          <author>Erik T. Ray</author>
+          <genre>Programming</genre>
+          <price>39.95</price>
+      </book>
+      <book id="bk003">
+          <title>XML Developer's Guide</title>
+          <author>Matthew Gambardella</author>
+          <genre>Computer</genre>
+          <price>44.95</price>
+      </book>
+  </library>
+```
+
+## Big Data Formats
+  - Parquet
+  - Feather
+
+
+## Other Data 
+::: {.columns}
+
+::: {.column}
+- Geographic Data
+  - GeoTIFF
+  - TIFF
+  - Shp
+- Relational Database
+  - SQL
+  - Duckdb
+
+:::
+
+::: {.column}
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNW5qdDNmNGR5dnBzaGVpN3BoOXZ5aHVrZXlvODMxNDRqbXpudnNnaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/W4IRlAVr714zK/giphy.gif){.img}
+:::
+
+::: 
+
+
+
+## Variants of CSV Files
+
+- PSV: Pipe Separated Files
+- SSV: Semicolon Separated Files
+- FWF: Fixed Width Format files
+
+::: {.callout-important}
+They are also saved as a *.csv file
+:::
+
