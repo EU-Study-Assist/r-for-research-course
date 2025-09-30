@@ -50,7 +50,7 @@ filters:
 
 
 ##
-![](images/file-format-breakdown.jpg){width="70%" fig-align="center" .img}
+![](images/file-format-breakdown.jpg){width="50%" fig-align="center" .img}
 
 ## 
 ::: {.columns}
@@ -74,8 +74,9 @@ filters:
 :::
 ::: 
 
-- Exercise
-write out 2 additional format for image, audio and video files
+### Exercise
+
+- write out 2 additional format for image, audio and video files
 
 ```{webr-r}
 
