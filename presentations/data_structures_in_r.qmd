@@ -1,0 +1,157 @@
+---
+title: "DATA STRUCTURES"
+format:
+  revealjs:
+    theme: "dark"
+    chalkboard: true
+filters:
+  - webr
+---
+
+## What are Data Structures? 
+
+They are ways to organize, store and manage data. 
+
+
+![Shipping Containers](https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+
+>Think of them as containers that keep your data neat and easy to access.
+
+## Common Storage we know {.scrollable}
+
+::: {.panel-tabset}
+
+### School Bag
+![](https://images.pexels.com/photos/5827881/pexels-photo-5827881.jpeg)
+
+### A bottle
+![](https://images.pexels.com/photos/1188649/pexels-photo-1188649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+
+### Mobile Phone
+![](https://images.pexels.com/photos/1156684/pexels-photo-1156684.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+
+### Books
+![](https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+
+:::
+
+# Types of Data Structure
+
+## The 5 Data Structures
+
+::: {.incremental}
+- atomic vector
+- matrix
+- data frame
+- list 
+- arrays 👀
+:::
+
+## Atomic vectors{.scrollable}
+
+- This is the simplest form of data structure and you are already familiar with it.
+
+```{webr-r}
+#| echo: True
+#| eval: True
+fruits <- c("mango", "orange", "apple", "pineapple", "kiwi")
+
+fruits
+```
+
+
+```{webr-r}
+#| echo: True
+is.vector(fruits)
+```
+
+- Store value in one dimension
+```{webr-r}
+#| echo: True
+six <- 6
+six
+```
+
+
+```{webr-r}
+#| echo: True
+is.vector(six)
+```
+
+- They are the data types or if you prefer, the types of atomic vector.
+
+
+## Remember the Data Types
+::: {.incremental}
+- Character
+- Double
+- Integer
+- Logical
+- Factor
+:::
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTRqMW1idml0bXo1dGVodDQ5dHcyZXBvdGJ5dDhhdjBqMTF0YjFoYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gKHGnB1ml0moQdjhEJ/giphy.gif){.absolute top=100 right=50 width="600"}
+
+## Example {.scrollable}
+> When you see the following you should be reminded of atomic vectors
+
+
+![A homogenously colored bead](https://cdn.pixabay.com/photo/2016/11/18/17/38/chaplet-1836010_960_720.jpg){width="800"}
+
+![A single colour train](https://images.pexels.com/photos/1658967/pexels-photo-1658967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1){width="800"}
+
+
+## Matrix{.scrollable}
+
+- Store values in two dimension
+- Store a single data type in rows and columns
+
+![A `5 X 4` egg crate](https://images.pexels.com/photos/24532278/pexels-photo-24532278/free-photo-of-open-egg-among-closed-eggs.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1){height="50%"}
+
+![A calendar](https://images.pexels.com/photos/5408818/pexels-photo-5408818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1){width="600"}
+
+## Data Frames{.scrollable}
+
+- Store values in two dimension
+- The most useful storage structure for data analysis
+- Store multiple data types, a data type per column
+
+::::{.columns}
+
+:::{.column width="50%}
+![Excel Spreadsheet](https://www.investopedia.com/thmb/J0Q2_vilZAeVKE0v5BGNsUMUfWI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1597729432-b42c59e7bdca4efeace46251656fb634.jpg)
+:::
+
+:::{.column width="50%}
+![Classroom Attendance](https://images.pexels.com/photos/289737/pexels-photo-289737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+:::
+
+::::
+
+
+## List{.scrollable}
+- They are like atomic vectors but with super power
+- They group different objects together instead of values. 
+
+### Examples
+
+![A backpack](https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1){width="800"}
+
+![Lunchbox](https://images.pexels.com/photos/5972003/pexels-photo-5972003.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1){width="800"}
+
+![Wallet](https://images.unsplash.com/photo-1614330315526-166f2d71e544?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D){width="800"}
+
+# Short Teaser
+
+::::{.columns}
+
+:::{.column width=50%}
+-  The containers in the introduction to this lesson?
+-  A book?
+-  Your mobile phone?
+:::
+
+::: {.column width=50%}
+![](https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+:::
+::::

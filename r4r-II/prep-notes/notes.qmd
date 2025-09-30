@@ -1,0 +1,197 @@
+---
+title: "Preparatory Notes"
+format: pdf
+pdf-engine: lualatex
+linestretch: 1.25
+mainfont: IBM Plex Sans
+callout-appearance: minimal
+---
+
+# Understanding External data
+Data most times won't be recorded manually and when they are recorded. You'd rather not do so with R. why? It is an excruciatingly difficult process to create data with R.  It is actually way easier to record data with spreadsheets than to record it with R, and this is even when you use the `edit()` function.
+
+### Data Sources
+When we want to import data into R, we need to know where to get it from. ***A data source is the place where the data we want to use originates from. This can be a physical or digital place*** A data source could be any of a live measurements from physical devices, a database, a flat file or plain-text file, scraped web data, or any of the innumerable static and streaming data services which abound across the internet. An example of a data source is [data.gov](https://data.gov/), and [wikipedia](https://wikipedia.com) and these are web data. Another example that is actually close to you is your mobile phone. It's a mobile database holding contact information, music data, games, and so on.
+
+### Data Format
+***Data formats*** *represent the form, structure and organization of data*. It defines how information is stored, accessed, and interpreted. It's a standardized way to represent data, whether in files or databases, and is crucial for efficient data management and processing. This brings us to another aspect that is important to knowing how to handle data, and that's **file extension**. If you've taken a closer look at the music/audio file on any of your device, you usually see a dot which separates the name of the file and a text which is usually fairly consistent depending on your file organization. This text is regarded to as the **file extension**. This is also true for your video, and picture files. For example, you could see the following extensions:
+
+|Audio|Pictures|Video|
+|-----|--------|-----|
+|.mp3|.png|.mp4|
+|.aac|.jpeg|.mov|
+|.flac|.gif|.avi|
+|.wav|.webp|.web,|
+|.ogg|.tiff|.mov|
+
+: Some of the common multimedia file format including audio, picture and video files.
+
+For data set, there are some common file format such as:
+
++ flat file : `.csv`, `.tsv`, `.txt`, `.rtf`
++ some web data format excluding those above: `.html`, `.json`, `xml`
++ spreadsheet: `.xlsx`, `.xls`, `.xlsm`, `.ods`, `.gsheet`
++ others: `.shp`, `.hdsf`, `.sav`, and many more.
+
+# Importing Data
+Data is imported into R based on the file type you are dealing with. We will cover some of the file types you come across when working with data in R. We can use base R to import data, but we won't. Instead, we will make use of packages for our data importation. There will be little focus on base R, as its implementation isn't different from that of the external packages. Where necessary, both base R and the package implementation of data importation will be given.
+
+## Flat file data
+Flat Files they are one of the most common forms in which data are stored. To import text files, we can use either of `data.table` or `readr`. Of course, let's not forget that base R's `util` can import flat files data too. There are still other packages that we can use to import flat file data, but, the goal is not to learn about the packages we can use to import data but how to import data. Firstly let's install `pacman` and use it's `p_load()` function to import the packages we need:
+
+```{r}
+#| eval: false
+#| label: install-pacman
+
+install.packages("pacman")
+```
+
+::: {.callout-note}
+
+`pacman` makes data import very easy. It throws an error when packages are not available. What makes easy to use is, you do not need to remember the quotation marks during package installation. It also have the `p_load()` function which is used to download, install, and load packages at once, performing the function of `install.packages`, and `library` at once.
+
+:::
+
+```{r}
+#| label: import-packages
+
+library(pacman)
+p_load(readr, data.table)
+```
+
+Without `pacman`, the steps would be:
+
+```{r}
+#| eval: false
+#| label: import packages-1
+install.packages(c("data.table", "readr")) # this can be further broken down 
+library(data.table)
+library(readr)
+```
+
+This is what makes `pacman` shines to me. You could also run the below, if you do not want to load `pacman` itself but just make use of its function.
+```{r}
+#| label: import packages-2
+#| eval: false
+
+pacman::p_load(readr, data.table)
+```
+
+Now that we are done with installing and loading our packages, let's take a closer look at the different flat files. There are two things we should consider when dealing with flat files:
+
+- The extension of the file.
+- The structure of file when opened.
+
+To some degree, the extension of your file could give you a hint on how to read it into R. .csv, would need a csv file reading function, .txt, would need its own also. Notwithstanding, the internal structure is what makes reading a file easier. In flat files data, the data presented in a way that mimics standard spreadsheet table, with the difference being in how their recorded are separated. While a spreadsheet is having its rows and column clearly defined, flat files have its own separated using a consistent sign or symbol in the document. These signs and symbols are regarded to as **delimiters**. For example, @fig-csv have it's columns separated by commas, so the delimiter is a comma, thus the name comma separated values. 
+
+![Example of the structure of a CSV file. the file is having its columns separated by a comma delimiter](images/csv-img.png){#fig-csv width=80%}
+
+
+If it is separated by semi-colon, the delimiter is a semi colon, but the name remains the same. The interesting thing is that comma separated files can still have their name saved in `.txt` format, that's why checking the file internal structure is important. Although almost anything can be used as a delimiter. Some common ones includes:
+
+
++ comma - `,`
++ tab - `\t`
++ semicolon - `;`
++ pipe - `|`,
++ whitespace
+
+To read a csv into R, you can run any of the following. They all have a first common argument which is the file path:
+
+```{r}
+#| label: import-dt-base
+#| tbl-cap: Base R utils
+
+# Base R implementation
+
+my_data <- read.csv(file = "data/ecological_health_dataset.csv")
+
+head(my_data)
+```
+
+> `head()` returns the firsts 6 records of the dataset.
+
+The readr implementation is also quite straight forward, instead of `read.csv()` it uses `read_csv()`.
+```{r}
+#| label: tbl-readr-csv
+#| tbl-cap: Reading a CSV file with `readr's` read_csv. Produces a tibble instead of a data.frame.
+
+read_csv("data/ecological_health_dataset.csv") |> head()
+```
+
+::: {.callout-note}
+This will be the first time we are seeing the operator `|>`. It is called the **pipe operator** and takes the result from its left hand side to the function/operation on the right hand side for evaluation. It is a nice way to chain operations without the need to  break down your code. The above could be written as:
+
+```{r}
+#| label: read-csv-two
+#| eval: false
+
+# Written as this
+my_data <- read_csv("data/ecological_health_dataset.csv")
+head(my_data)
+
+# Or
+head(read_csv("data/ecological_health_dataset.csv"))
+```
+
+The pipe will be used alot moving forward so we get used to it.
+:::
+
+The result of `read_csv()`,  and `read.csv()` seems different, and that's because one is a tibble--often regarded as the modern and clean version of data.frame--and the other is a data.frame. They show the same data with difference in presentation. The tibble is more detail and displays information about the dimension of the data, its column specification, then the data itself with each data type displayed under the column name.  To learn more about tibble visit the [Tibbles](https://r4ds.had.co.nz/tibbles.html) chapter in the R for Data Science 2nd Edition Book.
+
+Next is `data.table` implementation of reading files. It is the easiest, and fastest of all three when it comes to data reading, and we will see that later on in time. It uses the function `fread()`.
+
+```{r}
+#| label: fread
+#| tbl-cap: Reading a file with `data.table` fread function. It's output is a data.frame similar to using read.csv of base R
+fread("data/ecological_health_dataset.csv") |> 
+  head()
+```
+
+Of the three implementations, only the tibbles limits the column display to only what the screen/document can contain at a point in time, while the others have no limits.
+
+Sometimes we do have files that we want to import that are available online. These functions read online files without trouble, just ensure you know the file extension, so your data gets imported as expected. The import speed now depends on your internet speed and the file size.
+
+```{r}
+#| label: reading web stored csv
+#| tbl-cap: Reading web stored csv data. The data below is the same ecological data that has imported from the local machines.This time it is imported from GitHub.
+read_csv("https://raw.githubusercontent.com/EU-Study-Assist/data-for-r4r/refs/heads/main/r4r-II/prep-notes/data/ecological_health_dataset.csv") |> 
+  head()
+```
+
+
+In addition to `read.csv` or `read_csv`, we have other `read` functions that are named according to their file extensions. A list of some read_* functions are give below. There's a super function that reads a lot of flat file, that's the `read.delim` or `read_delim`, you only have to specify your delimiter in the right argument--`sep` for `read.delim()` and `delim` for `read_delim`.
+
+| file extension | base R | readr | data.table |
+| -------------- | ------ | ----- | ---------- |
+| txt | read.table | read.table | fread |
+| tsv | read.delim |read_tsv | fread | 
+| dat |read.table | read_table | fread | 
+| log | readLines | read_lines | fread | 
+| tab | read.delim | read_delim | fread |
+| psv | read.table | read_delim | fread |
+| fixed-width | read.fwf | read_fwf |fread |
+
+:::{.callout-note}
+The good thing about data.table fread is that it guesses delimiter for its user, making it easier to import files. This in addition to how fast the package is, make it a useful package to learn.
+:::
+
+There are other useful arguments you should take note off when you are importing data. Reading the documentation by using `help()` would expose you to these arguments. This include arguments like, header/col_names, sep/delim, na, skip, etc.
+
+## SpreadSheet
+Base R, readr, and data.table cannot import spreadsheet data. Instead, packages are used. When we hear spreadsheet, MS Excel is the first thing that comes to mind--well maybe that's my mind--but, spreadsheet are also different, and we can tell this by their file extensions. We have ods, xlsx, xls, gsheet. Except from gsheet which is usually a link in its non-native format, the rest can be seen as you tradition file extension on your personal computer.
+
+
+
+::: {.callout-warning}
+# WIP
+  - Spreadsheet
+  - Web API
+  - Web Scraping
+
+- Introduction to Document Creation
+  - Creating reports
+  - Creating manuscripts
+  - Website creation
+- Capstone Project
+:::

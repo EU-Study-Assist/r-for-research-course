@@ -1,0 +1,29 @@
+---
+title: "Congratulations"
+format: 
+  revealjs: 
+    theme: sky
+---
+
+
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHI4ODJmMHplZXpwdjl4anJ0MGZla2hhcW9xdHI3c3EzZ3pkMTByMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l49JNZ87F3AmPoH0A/giphy.gif){fig-align="center"}
+
+## Recap
+
+::::{.columns}
+
+:::{.column}
+- Operators
+- Data Types
+- Functions
+- Data Structures
+:::
+
+:::{.column}
+- Control Structure
+- Packages
+- R Workflow
+:::
+
+::::

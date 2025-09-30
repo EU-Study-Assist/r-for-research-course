@@ -1,0 +1,51 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Control Structure\"\n",
+        "format: \n",
+        "  revealjs:\n",
+        "    theme: \"sky\"\n",
+        "filters: \n",
+        "  - webr\n",
+        "---\n",
+        "\n",
+        "## INTRODUCTION\n",
+        "Control structure or control flow is how we determine which of our statements are executed and how they are repeated\n",
+        "\n",
+        "\n",
+        "::: {.incremental}\n",
+        "\n",
+        "## TOOLS OF CONTROL FLOW\n",
+        "- Choices\n",
+        "  - if statements\n",
+        "    - if()\n",
+        "    - if and else()\n",
+        "    - if else()\n",
+        "  - switch()\n",
+        "- Loops\n",
+        "  - for\n",
+        "  - while\n",
+        "\n",
+        ":::\n",
+        "\n",
+        "```{webr}\n",
+        "\n",
+        "```\n"
+      ],
+      "id": "803e0137"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

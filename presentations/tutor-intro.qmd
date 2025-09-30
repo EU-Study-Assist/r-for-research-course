@@ -1,0 +1,98 @@
+---
+title: "Welcome to R for Research"
+format: 
+  revealjs:
+    theme: "sky"
+---
+
+## Meet your guide
+
+![Olamide Adu](profile.png){fig-align="center" width=50%}
+
+:::{.incremental}
+- Data scientist 
+
+- Master’s degree in Forest Science, jointly awarded by the Swedish University of Agricultural Sciences and the University of Copenhagen.
+:::
+
+## Category of People I have Served {.scrollable}
+
+
+:::: {.columns}
+:::{.column}
+![](https://images.unsplash.com/photo-1647596325805-3255398c7ba8?q=80&w=2662&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+:::
+
+::: {.column}
+![](https://images.unsplash.com/photo-1503676382389-4809596d5290?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D){width=80%}
+:::
+
+::::
+
+:::: {.columns}
+::: {.column}
+![](https://images.pexels.com/photos/10375939/pexels-photo-10375939.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+:::
+
+::: {.column}
+![](https://images.pexels.com/photos/32115953/pexels-photo-32115953/free-photo-of-female-doctor-holding-medical-book-with-stethoscope.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+
+:::
+::::
+
+## Recent Experience
+
+:::{.incremental}
+-    Publication ready chart with GeorgeTown University 
+
+-    Interactive dashboards for Michigan Public Health School,
+
+-    Market behavior modeling at Lakshyaa Infotech,
+
+-    And designing user-friendly R Shiny apps for research and operations.
+:::
+
+# Course Design
+
+## Self Paced
+
+![Self-paced learning](https://images.pexels.com/photos/3466163/pexels-photo-3466163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1){width=35%}
+
+## Weekly Live Session
+
+![Weekly live sessions](https://images.pexels.com/photos/1595386/pexels-photo-1595386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1){width=40%}
+
+## Your Feedbacks are Welcomed
+![Learners feedback to improve content delivery](https://images.pexels.com/photos/9486674/pexels-photo-9486674.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1){width=35%}
+
+
+## Prefer a Bootcamp?
+
+![](r4r-bc.png){fig-align="center"}
+
+# Extra Support? 
+
+## Need more help? One-on-one sessions available
+![](https://images.pexels.com/photos/7640773/pexels-photo-7640773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1){fig-align="center}
+
+## Personalized data solutions
+
+![](https://images.unsplash.com/photo-1657727534685-36b09f84e193?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D){fig-align="center}
+
+## A Bit More About Me {.scrollable}
+
+[When I’m not coding...](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzViODM2emo1MTY3MHR4bm5xNmt6dXFteDV3ZDM2Mjl0MHpxOW93MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KAvlM8rLYEXkLTMMM5/giphy.gif){fig-align="center}
+
+<hr>
+
+![Watching Anime](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmZmOXdseG5icWRmNmxnbDEycHlhamNyYXk5NWF5bHI4dTRxdGsweSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/q217GUnfKAmJlFcjBX/giphy.gif){fig-align="center}
+
+![Taking walks](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzlheDB0Nzh1YTd5MjNocnR0NGVpZzliZW01Ym01Y2lxMjR6ZnVuOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nBgH1BhsX0qje/giphy.gif){fig-align="center}
+
+![Reading](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ21qb2J3em82bTM1eTU0amYwZHprc3hqZDcxdnhkeTNwMnpvaDNjMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NFA61GS9qKZ68/giphy.gif){fig-align="center}
+
+
+# Ready to begin? Let’s master R together.
+
+##
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGdodHY5bHpvdDFuamZuYW9xMHdsbm1ibjE5bzZhbWJ1ajk0dHNheiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1J3CbFgn5o7DGRuE/giphy.gif){fig-align="center}

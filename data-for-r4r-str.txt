@@ -1,0 +1,3328 @@
+.
+├── capstone
+│   └── capstone-solution.R
+├── data-for-r4r-str.txt
+├── data-for-r4r.Rproj
+├── exercises
+│   └── s.R
+├── presentations
+│   ├── _extensions
+│   │   └── coatless
+│   │       └── webr
+│   │           ├── _extension.yml
+│   │           ├── qwebr-cell-elements.js
+│   │           ├── qwebr-cell-initialization.js
+│   │           ├── qwebr-compute-engine.js
+│   │           ├── qwebr-document-engine-initialization.js
+│   │           ├── qwebr-document-history.js
+│   │           ├── qwebr-document-settings.js
+│   │           ├── qwebr-document-status.js
+│   │           ├── qwebr-monaco-editor-element.js
+│   │           ├── qwebr-monaco-editor-init.html
+│   │           ├── qwebr-styling.css
+│   │           ├── qwebr-theme-switch.js
+│   │           ├── template.qmd
+│   │           └── webr.lua
+│   ├── capstone-intro.html
+│   ├── capstone-intro.qmd
+│   ├── capstone-intro_files
+│   │   └── libs
+│   │       ├── clipboard
+│   │       │   └── clipboard.min.js
+│   │       ├── quarto-html
+│   │       │   ├── light-border.css
+│   │       │   ├── popper.min.js
+│   │       │   ├── quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css
+│   │       │   ├── quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css
+│   │       │   ├── tabby.min.js
+│   │       │   ├── tippy.css
+│   │       │   └── tippy.umd.min.js
+│   │       └── revealjs
+│   │           ├── dist
+│   │           │   ├── reset.css
+│   │           │   ├── reveal.css
+│   │           │   ├── reveal.esm.js
+│   │           │   ├── reveal.esm.js.map
+│   │           │   ├── reveal.js
+│   │           │   ├── reveal.js.map
+│   │           │   └── theme
+│   │           │       ├── fonts
+│   │           │       │   ├── league-gothic
+│   │           │       │   │   ├── LICENSE
+│   │           │       │   │   ├── league-gothic.css
+│   │           │       │   │   ├── league-gothic.eot
+│   │           │       │   │   ├── league-gothic.ttf
+│   │           │       │   │   └── league-gothic.woff
+│   │           │       │   └── source-sans-pro
+│   │           │       │       ├── LICENSE
+│   │           │       │       ├── source-sans-pro-italic.eot
+│   │           │       │       ├── source-sans-pro-italic.ttf
+│   │           │       │       ├── source-sans-pro-italic.woff
+│   │           │       │       ├── source-sans-pro-regular.eot
+│   │           │       │       ├── source-sans-pro-regular.ttf
+│   │           │       │       ├── source-sans-pro-regular.woff
+│   │           │       │       ├── source-sans-pro-semibold.eot
+│   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │           │       │       ├── source-sans-pro-semibold.woff
+│   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │           │       │       └── source-sans-pro.css
+│   │           │       ├── quarto-00033b64c7f4405b1251d0bf85080562.css
+│   │           │       ├── quarto-0c8acc74dca0c2faaedea4940f202713.css
+│   │           │       ├── quarto-2c1b5f745a11cfad616ebade4a4a7d24.css
+│   │           │       ├── quarto-340d960e8755bbda5148eb2f88c02f59.css
+│   │           │       ├── quarto-39d1eab08b8faec97b8adc39508066ea.css
+│   │           │       ├── quarto-421e21197ece528d4d1de15cb6028b12.css
+│   │           │       ├── quarto-8a5cdbf101a0845817b98f2425171703.css
+│   │           │       └── quarto-a89c3636d3310ab213cc169e1278657c.css
+│   │           └── plugin
+│   │               ├── highlight
+│   │               │   ├── highlight.esm.js
+│   │               │   ├── highlight.js
+│   │               │   ├── monokai.css
+│   │               │   ├── plugin.js
+│   │               │   └── zenburn.css
+│   │               ├── markdown
+│   │               │   ├── markdown.esm.js
+│   │               │   ├── markdown.js
+│   │               │   └── plugin.js
+│   │               ├── math
+│   │               │   ├── katex.js
+│   │               │   ├── math.esm.js
+│   │               │   ├── math.js
+│   │               │   ├── mathjax2.js
+│   │               │   ├── mathjax3.js
+│   │               │   └── plugin.js
+│   │               ├── notes
+│   │               │   ├── notes.esm.js
+│   │               │   ├── notes.js
+│   │               │   ├── plugin.js
+│   │               │   └── speaker-view.html
+│   │               ├── pdf-export
+│   │               │   ├── pdfexport.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-line-highlight
+│   │               │   ├── line-highlight.css
+│   │               │   ├── line-highlight.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-support
+│   │               │   ├── footer.css
+│   │               │   ├── plugin.yml
+│   │               │   └── support.js
+│   │               ├── reveal-menu
+│   │               │   ├── menu.css
+│   │               │   ├── menu.js
+│   │               │   ├── plugin.yml
+│   │               │   ├── quarto-menu.css
+│   │               │   └── quarto-menu.js
+│   │               ├── search
+│   │               │   ├── plugin.js
+│   │               │   ├── search.esm.js
+│   │               │   └── search.js
+│   │               └── zoom
+│   │                   ├── plugin.js
+│   │                   ├── zoom.esm.js
+│   │                   └── zoom.js
+│   ├── capstone-project.png
+│   ├── complete-example-data-structures.html
+│   ├── complete-example-data-structures.qmd
+│   ├── complete-example-data-structures_files
+│   │   └── libs
+│   │       ├── bootstrap
+│   │       │   ├── bootstrap-9b3f29d3b0fe30fa8a7dd7b9da1adc5a.min.css
+│   │       │   ├── bootstrap-f1f29bbdfb00dfb2b86572197e3920f4.min.css
+│   │       │   ├── bootstrap-icons.css
+│   │       │   ├── bootstrap-icons.woff
+│   │       │   └── bootstrap.min.js
+│   │       ├── clipboard
+│   │       │   └── clipboard.min.js
+│   │       ├── quarto-html
+│   │       │   ├── anchor.min.js
+│   │       │   ├── light-border.css
+│   │       │   ├── popper.min.js
+│   │       │   ├── quarto-syntax-highlighting-dark-7271f29f9498218151f3120baddb7363.css
+│   │       │   ├── quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css
+│   │       │   ├── quarto.js
+│   │       │   ├── tabby.min.js
+│   │       │   ├── tabsets
+│   │       │   │   └── tabsets.js
+│   │       │   ├── tippy.css
+│   │       │   └── tippy.umd.min.js
+│   │       └── revealjs
+│   │           ├── dist
+│   │           │   ├── reset.css
+│   │           │   ├── reveal.css
+│   │           │   ├── reveal.esm.js
+│   │           │   ├── reveal.esm.js.map
+│   │           │   ├── reveal.js
+│   │           │   ├── reveal.js.map
+│   │           │   └── theme
+│   │           │       ├── fonts
+│   │           │       │   ├── league-gothic
+│   │           │       │   │   ├── LICENSE
+│   │           │       │   │   ├── league-gothic.css
+│   │           │       │   │   ├── league-gothic.eot
+│   │           │       │   │   ├── league-gothic.ttf
+│   │           │       │   │   └── league-gothic.woff
+│   │           │       │   └── source-sans-pro
+│   │           │       │       ├── LICENSE
+│   │           │       │       ├── source-sans-pro-italic.eot
+│   │           │       │       ├── source-sans-pro-italic.ttf
+│   │           │       │       ├── source-sans-pro-italic.woff
+│   │           │       │       ├── source-sans-pro-regular.eot
+│   │           │       │       ├── source-sans-pro-regular.ttf
+│   │           │       │       ├── source-sans-pro-regular.woff
+│   │           │       │       ├── source-sans-pro-semibold.eot
+│   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │           │       │       ├── source-sans-pro-semibold.woff
+│   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │           │       │       └── source-sans-pro.css
+│   │           │       ├── quarto-37e33c7fd5cc18d8f701aa2e9bb826ce.css
+│   │           │       ├── quarto-8d9306e87da1988297dfb438703b3ecc.css
+│   │           │       └── quarto-e47a7bee3dbf43309fdd883fe45de79b.css
+│   │           └── plugin
+│   │               ├── highlight
+│   │               │   ├── highlight.esm.js
+│   │               │   ├── highlight.js
+│   │               │   ├── monokai.css
+│   │               │   ├── plugin.js
+│   │               │   └── zenburn.css
+│   │               ├── markdown
+│   │               │   ├── markdown.esm.js
+│   │               │   ├── markdown.js
+│   │               │   └── plugin.js
+│   │               ├── math
+│   │               │   ├── katex.js
+│   │               │   ├── math.esm.js
+│   │               │   ├── math.js
+│   │               │   ├── mathjax2.js
+│   │               │   ├── mathjax3.js
+│   │               │   └── plugin.js
+│   │               ├── notes
+│   │               │   ├── notes.esm.js
+│   │               │   ├── notes.js
+│   │               │   ├── plugin.js
+│   │               │   └── speaker-view.html
+│   │               ├── pdf-export
+│   │               │   ├── pdfexport.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-line-highlight
+│   │               │   ├── line-highlight.css
+│   │               │   ├── line-highlight.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-support
+│   │               │   ├── footer.css
+│   │               │   ├── plugin.yml
+│   │               │   └── support.js
+│   │               ├── reveal-chalkboard
+│   │               │   ├── README.md
+│   │               │   ├── font-awesome
+│   │               │   │   ├── LICENSE.txt
+│   │               │   │   ├── css
+│   │               │   │   │   ├── all.css
+│   │               │   │   │   ├── brands.css
+│   │               │   │   │   ├── fontawesome.css
+│   │               │   │   │   ├── regular.css
+│   │               │   │   │   ├── solid.css
+│   │               │   │   │   ├── svg-with-js.css
+│   │               │   │   │   ├── v4-shims.css
+│   │               │   │   │   └── v4-shims.min.css
+│   │               │   │   └── webfonts
+│   │               │   │       ├── fa-brands-400.eot
+│   │               │   │       ├── fa-brands-400.svg
+│   │               │   │       ├── fa-brands-400.ttf
+│   │               │   │       ├── fa-brands-400.woff
+│   │               │   │       ├── fa-brands-400.woff2
+│   │               │   │       ├── fa-regular-400.eot
+│   │               │   │       ├── fa-regular-400.svg
+│   │               │   │       ├── fa-regular-400.ttf
+│   │               │   │       ├── fa-regular-400.woff
+│   │               │   │       ├── fa-regular-400.woff2
+│   │               │   │       ├── fa-solid-900.eot
+│   │               │   │       ├── fa-solid-900.svg
+│   │               │   │       ├── fa-solid-900.ttf
+│   │               │   │       ├── fa-solid-900.woff
+│   │               │   │       └── fa-solid-900.woff2
+│   │               │   ├── img
+│   │               │   │   ├── blackboard.png
+│   │               │   │   ├── boardmarker-black.png
+│   │               │   │   ├── boardmarker-blue.png
+│   │               │   │   ├── boardmarker-green.png
+│   │               │   │   ├── boardmarker-orange.png
+│   │               │   │   ├── boardmarker-purple.png
+│   │               │   │   ├── boardmarker-red.png
+│   │               │   │   ├── boardmarker-yellow.png
+│   │               │   │   ├── chalk-blue.png
+│   │               │   │   ├── chalk-green.png
+│   │               │   │   ├── chalk-orange.png
+│   │               │   │   ├── chalk-purple.png
+│   │               │   │   ├── chalk-red.png
+│   │               │   │   ├── chalk-white.png
+│   │               │   │   ├── chalk-yellow.png
+│   │               │   │   ├── sponge.png
+│   │               │   │   └── whiteboard.png
+│   │               │   ├── plugin.js
+│   │               │   ├── plugin.yml
+│   │               │   └── style.css
+│   │               ├── reveal-menu
+│   │               │   ├── menu.css
+│   │               │   ├── menu.js
+│   │               │   ├── plugin.yml
+│   │               │   ├── quarto-menu.css
+│   │               │   └── quarto-menu.js
+│   │               ├── search
+│   │               │   ├── plugin.js
+│   │               │   ├── search.esm.js
+│   │               │   └── search.js
+│   │               └── zoom
+│   │                   ├── plugin.js
+│   │                   ├── zoom.esm.js
+│   │                   └── zoom.js
+│   ├── congratulaions.html
+│   ├── congratulaions.qmd
+│   ├── congratulaions_files
+│   │   └── libs
+│   │       ├── clipboard
+│   │       │   └── clipboard.min.js
+│   │       ├── quarto-html
+│   │       │   ├── light-border.css
+│   │       │   ├── popper.min.js
+│   │       │   ├── quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css
+│   │       │   ├── tabby.min.js
+│   │       │   ├── tippy.css
+│   │       │   └── tippy.umd.min.js
+│   │       └── revealjs
+│   │           ├── dist
+│   │           │   ├── reset.css
+│   │           │   ├── reveal.css
+│   │           │   ├── reveal.esm.js
+│   │           │   ├── reveal.esm.js.map
+│   │           │   ├── reveal.js
+│   │           │   ├── reveal.js.map
+│   │           │   └── theme
+│   │           │       ├── fonts
+│   │           │       │   ├── league-gothic
+│   │           │       │   │   ├── LICENSE
+│   │           │       │   │   ├── league-gothic.css
+│   │           │       │   │   ├── league-gothic.eot
+│   │           │       │   │   ├── league-gothic.ttf
+│   │           │       │   │   └── league-gothic.woff
+│   │           │       │   └── source-sans-pro
+│   │           │       │       ├── LICENSE
+│   │           │       │       ├── source-sans-pro-italic.eot
+│   │           │       │       ├── source-sans-pro-italic.ttf
+│   │           │       │       ├── source-sans-pro-italic.woff
+│   │           │       │       ├── source-sans-pro-regular.eot
+│   │           │       │       ├── source-sans-pro-regular.ttf
+│   │           │       │       ├── source-sans-pro-regular.woff
+│   │           │       │       ├── source-sans-pro-semibold.eot
+│   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │           │       │       ├── source-sans-pro-semibold.woff
+│   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │           │       │       └── source-sans-pro.css
+│   │           │       └── quarto-39d1eab08b8faec97b8adc39508066ea.css
+│   │           └── plugin
+│   │               ├── highlight
+│   │               │   ├── highlight.esm.js
+│   │               │   ├── highlight.js
+│   │               │   ├── monokai.css
+│   │               │   ├── plugin.js
+│   │               │   └── zenburn.css
+│   │               ├── markdown
+│   │               │   ├── markdown.esm.js
+│   │               │   ├── markdown.js
+│   │               │   └── plugin.js
+│   │               ├── math
+│   │               │   ├── katex.js
+│   │               │   ├── math.esm.js
+│   │               │   ├── math.js
+│   │               │   ├── mathjax2.js
+│   │               │   ├── mathjax3.js
+│   │               │   └── plugin.js
+│   │               ├── notes
+│   │               │   ├── notes.esm.js
+│   │               │   ├── notes.js
+│   │               │   ├── plugin.js
+│   │               │   └── speaker-view.html
+│   │               ├── pdf-export
+│   │               │   ├── pdfexport.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-line-highlight
+│   │               │   ├── line-highlight.css
+│   │               │   ├── line-highlight.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-support
+│   │               │   ├── footer.css
+│   │               │   ├── plugin.yml
+│   │               │   └── support.js
+│   │               ├── reveal-menu
+│   │               │   ├── menu.css
+│   │               │   ├── menu.js
+│   │               │   ├── plugin.yml
+│   │               │   ├── quarto-menu.css
+│   │               │   └── quarto-menu.js
+│   │               ├── search
+│   │               │   ├── plugin.js
+│   │               │   ├── search.esm.js
+│   │               │   └── search.js
+│   │               └── zoom
+│   │                   ├── plugin.js
+│   │                   ├── zoom.esm.js
+│   │                   └── zoom.js
+│   ├── control-structure.html
+│   ├── control-structure.qmd
+│   ├── control-structure.quarto_ipynb
+│   ├── control-structure_files
+│   │   └── libs
+│   │       ├── clipboard
+│   │       │   └── clipboard.min.js
+│   │       ├── quarto-html
+│   │       │   ├── light-border.css
+│   │       │   ├── popper.min.js
+│   │       │   ├── quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css
+│   │       │   ├── tabby.min.js
+│   │       │   ├── tippy.css
+│   │       │   └── tippy.umd.min.js
+│   │       └── revealjs
+│   │           ├── dist
+│   │           │   ├── reset.css
+│   │           │   ├── reveal.css
+│   │           │   ├── reveal.esm.js
+│   │           │   ├── reveal.esm.js.map
+│   │           │   ├── reveal.js
+│   │           │   ├── reveal.js.map
+│   │           │   └── theme
+│   │           │       ├── fonts
+│   │           │       │   ├── league-gothic
+│   │           │       │   │   ├── LICENSE
+│   │           │       │   │   ├── league-gothic.css
+│   │           │       │   │   ├── league-gothic.eot
+│   │           │       │   │   ├── league-gothic.ttf
+│   │           │       │   │   └── league-gothic.woff
+│   │           │       │   └── source-sans-pro
+│   │           │       │       ├── LICENSE
+│   │           │       │       ├── source-sans-pro-italic.eot
+│   │           │       │       ├── source-sans-pro-italic.ttf
+│   │           │       │       ├── source-sans-pro-italic.woff
+│   │           │       │       ├── source-sans-pro-regular.eot
+│   │           │       │       ├── source-sans-pro-regular.ttf
+│   │           │       │       ├── source-sans-pro-regular.woff
+│   │           │       │       ├── source-sans-pro-semibold.eot
+│   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │           │       │       ├── source-sans-pro-semibold.woff
+│   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │           │       │       └── source-sans-pro.css
+│   │           │       └── quarto-c2204bade40a765dc4872cb3627aba86.css
+│   │           └── plugin
+│   │               ├── highlight
+│   │               │   ├── highlight.esm.js
+│   │               │   ├── highlight.js
+│   │               │   ├── monokai.css
+│   │               │   ├── plugin.js
+│   │               │   └── zenburn.css
+│   │               ├── markdown
+│   │               │   ├── markdown.esm.js
+│   │               │   ├── markdown.js
+│   │               │   └── plugin.js
+│   │               ├── math
+│   │               │   ├── katex.js
+│   │               │   ├── math.esm.js
+│   │               │   ├── math.js
+│   │               │   ├── mathjax2.js
+│   │               │   ├── mathjax3.js
+│   │               │   └── plugin.js
+│   │               ├── notes
+│   │               │   ├── notes.esm.js
+│   │               │   ├── notes.js
+│   │               │   ├── plugin.js
+│   │               │   └── speaker-view.html
+│   │               ├── pdf-export
+│   │               │   ├── pdfexport.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-line-highlight
+│   │               │   ├── line-highlight.css
+│   │               │   ├── line-highlight.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-support
+│   │               │   ├── footer.css
+│   │               │   ├── plugin.yml
+│   │               │   └── support.js
+│   │               ├── reveal-menu
+│   │               │   ├── menu.css
+│   │               │   ├── menu.js
+│   │               │   ├── plugin.yml
+│   │               │   ├── quarto-menu.css
+│   │               │   └── quarto-menu.js
+│   │               ├── search
+│   │               │   ├── plugin.js
+│   │               │   ├── search.esm.js
+│   │               │   └── search.js
+│   │               └── zoom
+│   │                   ├── plugin.js
+│   │                   ├── zoom.esm.js
+│   │                   └── zoom.js
+│   ├── course-intro.html
+│   ├── course-intro.qmd
+│   ├── course-intro_files
+│   │   └── libs
+│   │       ├── clipboard
+│   │       │   └── clipboard.min.js
+│   │       ├── quarto-html
+│   │       │   ├── light-border.css
+│   │       │   ├── popper.min.js
+│   │       │   ├── quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css
+│   │       │   ├── quarto-syntax-highlighting-dark-7271f29f9498218151f3120baddb7363.css
+│   │       │   ├── tabby.min.js
+│   │       │   ├── tippy.css
+│   │       │   └── tippy.umd.min.js
+│   │       └── revealjs
+│   │           ├── dist
+│   │           │   ├── reset.css
+│   │           │   ├── reveal.css
+│   │           │   ├── reveal.esm.js
+│   │           │   ├── reveal.esm.js.map
+│   │           │   ├── reveal.js
+│   │           │   ├── reveal.js.map
+│   │           │   └── theme
+│   │           │       ├── fonts
+│   │           │       │   ├── league-gothic
+│   │           │       │   │   ├── LICENSE
+│   │           │       │   │   ├── league-gothic.css
+│   │           │       │   │   ├── league-gothic.eot
+│   │           │       │   │   ├── league-gothic.ttf
+│   │           │       │   │   └── league-gothic.woff
+│   │           │       │   └── source-sans-pro
+│   │           │       │       ├── LICENSE
+│   │           │       │       ├── source-sans-pro-italic.eot
+│   │           │       │       ├── source-sans-pro-italic.ttf
+│   │           │       │       ├── source-sans-pro-italic.woff
+│   │           │       │       ├── source-sans-pro-regular.eot
+│   │           │       │       ├── source-sans-pro-regular.ttf
+│   │           │       │       ├── source-sans-pro-regular.woff
+│   │           │       │       ├── source-sans-pro-semibold.eot
+│   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │           │       │       ├── source-sans-pro-semibold.woff
+│   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │           │       │       └── source-sans-pro.css
+│   │           │       ├── quarto-00ac2f6af1389919a18f42df5b7c0002.css
+│   │           │       ├── quarto-226ed3c72bfd61863303a8d54728a120.css
+│   │           │       ├── quarto-250687541b6fd0303e6fa9a425de9713.css
+│   │           │       ├── quarto-37e33c7fd5cc18d8f701aa2e9bb826ce.css
+│   │           │       ├── quarto-8d44ddfa7ca2b144a7bece2f52dd27e9.css
+│   │           │       ├── quarto-a4d0b8bc80fdc8a3d4f7e85676168896.css
+│   │           │       ├── quarto-a7ae102ff4c0744d6025bcfd63e1c29a.css
+│   │           │       └── quarto-c2204bade40a765dc4872cb3627aba86.css
+│   │           └── plugin
+│   │               ├── highlight
+│   │               │   ├── highlight.esm.js
+│   │               │   ├── highlight.js
+│   │               │   ├── monokai.css
+│   │               │   ├── plugin.js
+│   │               │   └── zenburn.css
+│   │               ├── markdown
+│   │               │   ├── markdown.esm.js
+│   │               │   ├── markdown.js
+│   │               │   └── plugin.js
+│   │               ├── math
+│   │               │   ├── katex.js
+│   │               │   ├── math.esm.js
+│   │               │   ├── math.js
+│   │               │   ├── mathjax2.js
+│   │               │   ├── mathjax3.js
+│   │               │   └── plugin.js
+│   │               ├── notes
+│   │               │   ├── notes.esm.js
+│   │               │   ├── notes.js
+│   │               │   ├── plugin.js
+│   │               │   └── speaker-view.html
+│   │               ├── pdf-export
+│   │               │   ├── pdfexport.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-line-highlight
+│   │               │   ├── line-highlight.css
+│   │               │   ├── line-highlight.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-support
+│   │               │   ├── footer.css
+│   │               │   ├── plugin.yml
+│   │               │   └── support.js
+│   │               ├── reveal-menu
+│   │               │   ├── menu.css
+│   │               │   ├── menu.js
+│   │               │   ├── plugin.yml
+│   │               │   ├── quarto-menu.css
+│   │               │   └── quarto-menu.js
+│   │               ├── search
+│   │               │   ├── plugin.js
+│   │               │   ├── search.esm.js
+│   │               │   └── search.js
+│   │               └── zoom
+│   │                   ├── plugin.js
+│   │                   ├── zoom.esm.js
+│   │                   └── zoom.js
+│   ├── data-structures.jpg
+│   ├── data_structures_in_r.html
+│   ├── data_structures_in_r.qmd
+│   ├── data_structures_in_r_files
+│   │   └── libs
+│   │       ├── clipboard
+│   │       │   └── clipboard.min.js
+│   │       ├── quarto-html
+│   │       │   ├── light-border.css
+│   │       │   ├── popper.min.js
+│   │       │   ├── quarto-html.min.css
+│   │       │   ├── quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css
+│   │       │   ├── quarto-syntax-highlighting-dark.css
+│   │       │   ├── tabby.min.js
+│   │       │   ├── tippy.css
+│   │       │   └── tippy.umd.min.js
+│   │       └── revealjs
+│   │           ├── dist
+│   │           │   ├── reset.css
+│   │           │   ├── reveal.css
+│   │           │   ├── reveal.esm.js
+│   │           │   ├── reveal.esm.js.map
+│   │           │   ├── reveal.js
+│   │           │   ├── reveal.js.map
+│   │           │   └── theme
+│   │           │       ├── fonts
+│   │           │       │   ├── league-gothic
+│   │           │       │   │   ├── LICENSE
+│   │           │       │   │   ├── league-gothic.css
+│   │           │       │   │   ├── league-gothic.eot
+│   │           │       │   │   ├── league-gothic.ttf
+│   │           │       │   │   └── league-gothic.woff
+│   │           │       │   └── source-sans-pro
+│   │           │       │       ├── LICENSE
+│   │           │       │       ├── source-sans-pro-italic.eot
+│   │           │       │       ├── source-sans-pro-italic.ttf
+│   │           │       │       ├── source-sans-pro-italic.woff
+│   │           │       │       ├── source-sans-pro-regular.eot
+│   │           │       │       ├── source-sans-pro-regular.ttf
+│   │           │       │       ├── source-sans-pro-regular.woff
+│   │           │       │       ├── source-sans-pro-semibold.eot
+│   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │           │       │       ├── source-sans-pro-semibold.woff
+│   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │           │       │       └── source-sans-pro.css
+│   │           │       ├── quarto-5b48f34d633aed70c74c672477009ffc.css
+│   │           │       └── quarto.css
+│   │           └── plugin
+│   │               ├── highlight
+│   │               │   ├── highlight.esm.js
+│   │               │   ├── highlight.js
+│   │               │   ├── monokai.css
+│   │               │   ├── plugin.js
+│   │               │   └── zenburn.css
+│   │               ├── markdown
+│   │               │   ├── markdown.esm.js
+│   │               │   ├── markdown.js
+│   │               │   └── plugin.js
+│   │               ├── math
+│   │               │   ├── katex.js
+│   │               │   ├── math.esm.js
+│   │               │   ├── math.js
+│   │               │   ├── mathjax2.js
+│   │               │   ├── mathjax3.js
+│   │               │   └── plugin.js
+│   │               ├── notes
+│   │               │   ├── notes.esm.js
+│   │               │   ├── notes.js
+│   │               │   ├── plugin.js
+│   │               │   └── speaker-view.html
+│   │               ├── pdf-export
+│   │               │   ├── pdfexport.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-line-highlight
+│   │               │   ├── line-highlight.css
+│   │               │   ├── line-highlight.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-support
+│   │               │   ├── footer.css
+│   │               │   ├── plugin.yml
+│   │               │   └── support.js
+│   │               ├── reveal-chalkboard
+│   │               │   ├── README.md
+│   │               │   ├── font-awesome
+│   │               │   │   ├── LICENSE.txt
+│   │               │   │   ├── css
+│   │               │   │   │   ├── all.css
+│   │               │   │   │   ├── brands.css
+│   │               │   │   │   ├── fontawesome.css
+│   │               │   │   │   ├── regular.css
+│   │               │   │   │   ├── solid.css
+│   │               │   │   │   ├── svg-with-js.css
+│   │               │   │   │   ├── v4-shims.css
+│   │               │   │   │   └── v4-shims.min.css
+│   │               │   │   └── webfonts
+│   │               │   │       ├── fa-brands-400.eot
+│   │               │   │       ├── fa-brands-400.svg
+│   │               │   │       ├── fa-brands-400.ttf
+│   │               │   │       ├── fa-brands-400.woff
+│   │               │   │       ├── fa-brands-400.woff2
+│   │               │   │       ├── fa-regular-400.eot
+│   │               │   │       ├── fa-regular-400.svg
+│   │               │   │       ├── fa-regular-400.ttf
+│   │               │   │       ├── fa-regular-400.woff
+│   │               │   │       ├── fa-regular-400.woff2
+│   │               │   │       ├── fa-solid-900.eot
+│   │               │   │       ├── fa-solid-900.svg
+│   │               │   │       ├── fa-solid-900.ttf
+│   │               │   │       ├── fa-solid-900.woff
+│   │               │   │       └── fa-solid-900.woff2
+│   │               │   ├── img
+│   │               │   │   ├── blackboard.png
+│   │               │   │   ├── boardmarker-black.png
+│   │               │   │   ├── boardmarker-blue.png
+│   │               │   │   ├── boardmarker-green.png
+│   │               │   │   ├── boardmarker-orange.png
+│   │               │   │   ├── boardmarker-purple.png
+│   │               │   │   ├── boardmarker-red.png
+│   │               │   │   ├── boardmarker-yellow.png
+│   │               │   │   ├── chalk-blue.png
+│   │               │   │   ├── chalk-green.png
+│   │               │   │   ├── chalk-orange.png
+│   │               │   │   ├── chalk-purple.png
+│   │               │   │   ├── chalk-red.png
+│   │               │   │   ├── chalk-white.png
+│   │               │   │   ├── chalk-yellow.png
+│   │               │   │   ├── sponge.png
+│   │               │   │   └── whiteboard.png
+│   │               │   ├── plugin.js
+│   │               │   ├── plugin.yml
+│   │               │   └── style.css
+│   │               ├── reveal-menu
+│   │               │   ├── menu.css
+│   │               │   ├── menu.js
+│   │               │   ├── plugin.yml
+│   │               │   ├── quarto-menu.css
+│   │               │   └── quarto-menu.js
+│   │               ├── search
+│   │               │   ├── plugin.js
+│   │               │   ├── search.esm.js
+│   │               │   └── search.js
+│   │               └── zoom
+│   │                   ├── plugin.js
+│   │                   ├── zoom.esm.js
+│   │                   └── zoom.js
+│   ├── factors-presentation.html
+│   ├── factors-presentation.qmd
+│   ├── factors-presentation_files
+│   │   └── libs
+│   │       ├── clipboard
+│   │       │   └── clipboard.min.js
+│   │       ├── quarto-html
+│   │       │   ├── light-border.css
+│   │       │   ├── popper.min.js
+│   │       │   ├── quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css
+│   │       │   ├── tabby.min.js
+│   │       │   ├── tippy.css
+│   │       │   └── tippy.umd.min.js
+│   │       └── revealjs
+│   │           ├── dist
+│   │           │   ├── reset.css
+│   │           │   ├── reveal.css
+│   │           │   ├── reveal.esm.js
+│   │           │   ├── reveal.esm.js.map
+│   │           │   ├── reveal.js
+│   │           │   ├── reveal.js.map
+│   │           │   └── theme
+│   │           │       ├── fonts
+│   │           │       │   ├── league-gothic
+│   │           │       │   │   ├── LICENSE
+│   │           │       │   │   ├── league-gothic.css
+│   │           │       │   │   ├── league-gothic.eot
+│   │           │       │   │   ├── league-gothic.ttf
+│   │           │       │   │   └── league-gothic.woff
+│   │           │       │   └── source-sans-pro
+│   │           │       │       ├── LICENSE
+│   │           │       │       ├── source-sans-pro-italic.eot
+│   │           │       │       ├── source-sans-pro-italic.ttf
+│   │           │       │       ├── source-sans-pro-italic.woff
+│   │           │       │       ├── source-sans-pro-regular.eot
+│   │           │       │       ├── source-sans-pro-regular.ttf
+│   │           │       │       ├── source-sans-pro-regular.woff
+│   │           │       │       ├── source-sans-pro-semibold.eot
+│   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │           │       │       ├── source-sans-pro-semibold.woff
+│   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │           │       │       └── source-sans-pro.css
+│   │           │       └── quarto-5b48f34d633aed70c74c672477009ffc.css
+│   │           └── plugin
+│   │               ├── highlight
+│   │               │   ├── highlight.esm.js
+│   │               │   ├── highlight.js
+│   │               │   ├── monokai.css
+│   │               │   ├── plugin.js
+│   │               │   └── zenburn.css
+│   │               ├── markdown
+│   │               │   ├── markdown.esm.js
+│   │               │   ├── markdown.js
+│   │               │   └── plugin.js
+│   │               ├── math
+│   │               │   ├── katex.js
+│   │               │   ├── math.esm.js
+│   │               │   ├── math.js
+│   │               │   ├── mathjax2.js
+│   │               │   ├── mathjax3.js
+│   │               │   └── plugin.js
+│   │               ├── notes
+│   │               │   ├── notes.esm.js
+│   │               │   ├── notes.js
+│   │               │   ├── plugin.js
+│   │               │   └── speaker-view.html
+│   │               ├── pdf-export
+│   │               │   ├── pdfexport.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-line-highlight
+│   │               │   ├── line-highlight.css
+│   │               │   ├── line-highlight.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-support
+│   │               │   ├── footer.css
+│   │               │   ├── plugin.yml
+│   │               │   └── support.js
+│   │               ├── reveal-menu
+│   │               │   ├── menu.css
+│   │               │   ├── menu.js
+│   │               │   ├── plugin.yml
+│   │               │   ├── quarto-menu.css
+│   │               │   └── quarto-menu.js
+│   │               ├── search
+│   │               │   ├── plugin.js
+│   │               │   ├── search.esm.js
+│   │               │   └── search.js
+│   │               └── zoom
+│   │                   ├── plugin.js
+│   │                   ├── zoom.esm.js
+│   │                   └── zoom.js
+│   ├── for-while.png
+│   ├── functions.html
+│   ├── functions.qmd
+│   ├── functions_files
+│   │   └── libs
+│   │       ├── clipboard
+│   │       │   └── clipboard.min.js
+│   │       ├── quarto-html
+│   │       │   ├── light-border.css
+│   │       │   ├── popper.min.js
+│   │       │   ├── quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css
+│   │       │   ├── tabby.min.js
+│   │       │   ├── tippy.css
+│   │       │   └── tippy.umd.min.js
+│   │       └── revealjs
+│   │           ├── dist
+│   │           │   ├── reset.css
+│   │           │   ├── reveal.css
+│   │           │   ├── reveal.esm.js
+│   │           │   ├── reveal.esm.js.map
+│   │           │   ├── reveal.js
+│   │           │   ├── reveal.js.map
+│   │           │   └── theme
+│   │           │       ├── fonts
+│   │           │       │   ├── league-gothic
+│   │           │       │   │   ├── LICENSE
+│   │           │       │   │   ├── league-gothic.css
+│   │           │       │   │   ├── league-gothic.eot
+│   │           │       │   │   ├── league-gothic.ttf
+│   │           │       │   │   └── league-gothic.woff
+│   │           │       │   └── source-sans-pro
+│   │           │       │       ├── LICENSE
+│   │           │       │       ├── source-sans-pro-italic.eot
+│   │           │       │       ├── source-sans-pro-italic.ttf
+│   │           │       │       ├── source-sans-pro-italic.woff
+│   │           │       │       ├── source-sans-pro-regular.eot
+│   │           │       │       ├── source-sans-pro-regular.ttf
+│   │           │       │       ├── source-sans-pro-regular.woff
+│   │           │       │       ├── source-sans-pro-semibold.eot
+│   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │           │       │       ├── source-sans-pro-semibold.woff
+│   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │           │       │       └── source-sans-pro.css
+│   │           │       └── quarto-5b48f34d633aed70c74c672477009ffc.css
+│   │           └── plugin
+│   │               ├── highlight
+│   │               │   ├── highlight.esm.js
+│   │               │   ├── highlight.js
+│   │               │   ├── monokai.css
+│   │               │   ├── plugin.js
+│   │               │   └── zenburn.css
+│   │               ├── markdown
+│   │               │   ├── markdown.esm.js
+│   │               │   ├── markdown.js
+│   │               │   └── plugin.js
+│   │               ├── math
+│   │               │   ├── katex.js
+│   │               │   ├── math.esm.js
+│   │               │   ├── math.js
+│   │               │   ├── mathjax2.js
+│   │               │   ├── mathjax3.js
+│   │               │   └── plugin.js
+│   │               ├── notes
+│   │               │   ├── notes.esm.js
+│   │               │   ├── notes.js
+│   │               │   ├── plugin.js
+│   │               │   └── speaker-view.html
+│   │               ├── pdf-export
+│   │               │   ├── pdfexport.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-line-highlight
+│   │               │   ├── line-highlight.css
+│   │               │   ├── line-highlight.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-support
+│   │               │   ├── footer.css
+│   │               │   ├── plugin.yml
+│   │               │   └── support.js
+│   │               ├── reveal-menu
+│   │               │   ├── menu.css
+│   │               │   ├── menu.js
+│   │               │   ├── plugin.yml
+│   │               │   ├── quarto-menu.css
+│   │               │   └── quarto-menu.js
+│   │               ├── search
+│   │               │   ├── plugin.js
+│   │               │   ├── search.esm.js
+│   │               │   └── search.js
+│   │               └── zoom
+│   │                   ├── plugin.js
+│   │                   ├── zoom.esm.js
+│   │                   └── zoom.js
+│   ├── if-switch.png
+│   ├── packages.html
+│   ├── packages.qmd
+│   ├── packages_files
+│   │   └── libs
+│   │       ├── clipboard
+│   │       │   └── clipboard.min.js
+│   │       ├── quarto-html
+│   │       │   ├── light-border.css
+│   │       │   ├── popper.min.js
+│   │       │   ├── quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css
+│   │       │   ├── tabby.min.js
+│   │       │   ├── tippy.css
+│   │       │   └── tippy.umd.min.js
+│   │       └── revealjs
+│   │           ├── dist
+│   │           │   ├── reset.css
+│   │           │   ├── reveal.css
+│   │           │   ├── reveal.esm.js
+│   │           │   ├── reveal.esm.js.map
+│   │           │   ├── reveal.js
+│   │           │   ├── reveal.js.map
+│   │           │   └── theme
+│   │           │       ├── fonts
+│   │           │       │   ├── league-gothic
+│   │           │       │   │   ├── LICENSE
+│   │           │       │   │   ├── league-gothic.css
+│   │           │       │   │   ├── league-gothic.eot
+│   │           │       │   │   ├── league-gothic.ttf
+│   │           │       │   │   └── league-gothic.woff
+│   │           │       │   └── source-sans-pro
+│   │           │       │       ├── LICENSE
+│   │           │       │       ├── source-sans-pro-italic.eot
+│   │           │       │       ├── source-sans-pro-italic.ttf
+│   │           │       │       ├── source-sans-pro-italic.woff
+│   │           │       │       ├── source-sans-pro-regular.eot
+│   │           │       │       ├── source-sans-pro-regular.ttf
+│   │           │       │       ├── source-sans-pro-regular.woff
+│   │           │       │       ├── source-sans-pro-semibold.eot
+│   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │           │       │       ├── source-sans-pro-semibold.woff
+│   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │           │       │       └── source-sans-pro.css
+│   │           │       └── quarto-39d1eab08b8faec97b8adc39508066ea.css
+│   │           └── plugin
+│   │               ├── highlight
+│   │               │   ├── highlight.esm.js
+│   │               │   ├── highlight.js
+│   │               │   ├── monokai.css
+│   │               │   ├── plugin.js
+│   │               │   └── zenburn.css
+│   │               ├── markdown
+│   │               │   ├── markdown.esm.js
+│   │               │   ├── markdown.js
+│   │               │   └── plugin.js
+│   │               ├── math
+│   │               │   ├── katex.js
+│   │               │   ├── math.esm.js
+│   │               │   ├── math.js
+│   │               │   ├── mathjax2.js
+│   │               │   ├── mathjax3.js
+│   │               │   └── plugin.js
+│   │               ├── notes
+│   │               │   ├── notes.esm.js
+│   │               │   ├── notes.js
+│   │               │   ├── plugin.js
+│   │               │   └── speaker-view.html
+│   │               ├── pdf-export
+│   │               │   ├── pdfexport.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-line-highlight
+│   │               │   ├── line-highlight.css
+│   │               │   ├── line-highlight.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-support
+│   │               │   ├── footer.css
+│   │               │   ├── plugin.yml
+│   │               │   └── support.js
+│   │               ├── reveal-menu
+│   │               │   ├── menu.css
+│   │               │   ├── menu.js
+│   │               │   ├── plugin.yml
+│   │               │   ├── quarto-menu.css
+│   │               │   └── quarto-menu.js
+│   │               ├── search
+│   │               │   ├── plugin.js
+│   │               │   ├── search.esm.js
+│   │               │   └── search.js
+│   │               └── zoom
+│   │                   ├── plugin.js
+│   │                   ├── zoom.esm.js
+│   │                   └── zoom.js
+│   ├── profile.png
+│   ├── r4r-bc.png
+│   ├── simulating-numbers.html
+│   ├── simulating-numbers.qmd
+│   ├── simulating-numbers_files
+│   │   └── libs
+│   │       ├── clipboard
+│   │       │   └── clipboard.min.js
+│   │       ├── quarto-html
+│   │       │   ├── light-border.css
+│   │       │   ├── popper.min.js
+│   │       │   ├── quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css
+│   │       │   ├── quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css
+│   │       │   ├── tabby.min.js
+│   │       │   ├── tippy.css
+│   │       │   └── tippy.umd.min.js
+│   │       └── revealjs
+│   │           ├── dist
+│   │           │   ├── reset.css
+│   │           │   ├── reveal.css
+│   │           │   ├── reveal.esm.js
+│   │           │   ├── reveal.esm.js.map
+│   │           │   ├── reveal.js
+│   │           │   ├── reveal.js.map
+│   │           │   └── theme
+│   │           │       ├── fonts
+│   │           │       │   ├── league-gothic
+│   │           │       │   │   ├── LICENSE
+│   │           │       │   │   ├── league-gothic.css
+│   │           │       │   │   ├── league-gothic.eot
+│   │           │       │   │   ├── league-gothic.ttf
+│   │           │       │   │   └── league-gothic.woff
+│   │           │       │   └── source-sans-pro
+│   │           │       │       ├── LICENSE
+│   │           │       │       ├── source-sans-pro-italic.eot
+│   │           │       │       ├── source-sans-pro-italic.ttf
+│   │           │       │       ├── source-sans-pro-italic.woff
+│   │           │       │       ├── source-sans-pro-regular.eot
+│   │           │       │       ├── source-sans-pro-regular.ttf
+│   │           │       │       ├── source-sans-pro-regular.woff
+│   │           │       │       ├── source-sans-pro-semibold.eot
+│   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │           │       │       ├── source-sans-pro-semibold.woff
+│   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │           │       │       └── source-sans-pro.css
+│   │           │       ├── quarto-5b48f34d633aed70c74c672477009ffc.css
+│   │           │       └── quarto-bbe7401fe57d4b791b917637bb662036.css
+│   │           └── plugin
+│   │               ├── highlight
+│   │               │   ├── highlight.esm.js
+│   │               │   ├── highlight.js
+│   │               │   ├── monokai.css
+│   │               │   ├── plugin.js
+│   │               │   └── zenburn.css
+│   │               ├── markdown
+│   │               │   ├── markdown.esm.js
+│   │               │   ├── markdown.js
+│   │               │   └── plugin.js
+│   │               ├── math
+│   │               │   ├── katex.js
+│   │               │   ├── math.esm.js
+│   │               │   ├── math.js
+│   │               │   ├── mathjax2.js
+│   │               │   ├── mathjax3.js
+│   │               │   └── plugin.js
+│   │               ├── notes
+│   │               │   ├── notes.esm.js
+│   │               │   ├── notes.js
+│   │               │   ├── plugin.js
+│   │               │   └── speaker-view.html
+│   │               ├── pdf-export
+│   │               │   ├── pdfexport.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-line-highlight
+│   │               │   ├── line-highlight.css
+│   │               │   ├── line-highlight.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-support
+│   │               │   ├── footer.css
+│   │               │   ├── plugin.yml
+│   │               │   └── support.js
+│   │               ├── reveal-menu
+│   │               │   ├── menu.css
+│   │               │   ├── menu.js
+│   │               │   ├── plugin.yml
+│   │               │   ├── quarto-menu.css
+│   │               │   └── quarto-menu.js
+│   │               ├── search
+│   │               │   ├── plugin.js
+│   │               │   ├── search.esm.js
+│   │               │   └── search.js
+│   │               └── zoom
+│   │                   ├── plugin.js
+│   │                   ├── zoom.esm.js
+│   │                   └── zoom.js
+│   ├── stay-out.jpeg
+│   ├── style.css
+│   ├── tutor-intro.html
+│   ├── tutor-intro.qmd
+│   ├── tutor-intro_files
+│   │   └── libs
+│   │       ├── clipboard
+│   │       │   └── clipboard.min.js
+│   │       ├── quarto-html
+│   │       │   ├── light-border.css
+│   │       │   ├── popper.min.js
+│   │       │   ├── quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css
+│   │       │   ├── quarto-syntax-highlighting-dark-7271f29f9498218151f3120baddb7363.css
+│   │       │   ├── tabby.min.js
+│   │       │   ├── tippy.css
+│   │       │   └── tippy.umd.min.js
+│   │       └── revealjs
+│   │           ├── dist
+│   │           │   ├── reset.css
+│   │           │   ├── reveal.css
+│   │           │   ├── reveal.esm.js
+│   │           │   ├── reveal.esm.js.map
+│   │           │   ├── reveal.js
+│   │           │   ├── reveal.js.map
+│   │           │   └── theme
+│   │           │       ├── fonts
+│   │           │       │   ├── league-gothic
+│   │           │       │   │   ├── LICENSE
+│   │           │       │   │   ├── league-gothic.css
+│   │           │       │   │   ├── league-gothic.eot
+│   │           │       │   │   ├── league-gothic.ttf
+│   │           │       │   │   └── league-gothic.woff
+│   │           │       │   └── source-sans-pro
+│   │           │       │       ├── LICENSE
+│   │           │       │       ├── source-sans-pro-italic.eot
+│   │           │       │       ├── source-sans-pro-italic.ttf
+│   │           │       │       ├── source-sans-pro-italic.woff
+│   │           │       │       ├── source-sans-pro-regular.eot
+│   │           │       │       ├── source-sans-pro-regular.ttf
+│   │           │       │       ├── source-sans-pro-regular.woff
+│   │           │       │       ├── source-sans-pro-semibold.eot
+│   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │           │       │       ├── source-sans-pro-semibold.woff
+│   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │           │       │       └── source-sans-pro.css
+│   │           │       ├── quarto-068227b0d8868448a1a2709d6e7f5663.css
+│   │           │       ├── quarto-226ed3c72bfd61863303a8d54728a120.css
+│   │           │       ├── quarto-37e33c7fd5cc18d8f701aa2e9bb826ce.css
+│   │           │       ├── quarto-6be0ff7157fc16852616b00855d08544.css
+│   │           │       ├── quarto-8fdde7cabfcc69ccadd1417826581427.css
+│   │           │       ├── quarto-a4d0b8bc80fdc8a3d4f7e85676168896.css
+│   │           │       ├── quarto-a7ae102ff4c0744d6025bcfd63e1c29a.css
+│   │           │       └── quarto-c2204bade40a765dc4872cb3627aba86.css
+│   │           └── plugin
+│   │               ├── highlight
+│   │               │   ├── highlight.esm.js
+│   │               │   ├── highlight.js
+│   │               │   ├── monokai.css
+│   │               │   ├── plugin.js
+│   │               │   └── zenburn.css
+│   │               ├── markdown
+│   │               │   ├── markdown.esm.js
+│   │               │   ├── markdown.js
+│   │               │   └── plugin.js
+│   │               ├── math
+│   │               │   ├── katex.js
+│   │               │   ├── math.esm.js
+│   │               │   ├── math.js
+│   │               │   ├── mathjax2.js
+│   │               │   ├── mathjax3.js
+│   │               │   └── plugin.js
+│   │               ├── notes
+│   │               │   ├── notes.esm.js
+│   │               │   ├── notes.js
+│   │               │   ├── plugin.js
+│   │               │   └── speaker-view.html
+│   │               ├── pdf-export
+│   │               │   ├── pdfexport.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-line-highlight
+│   │               │   ├── line-highlight.css
+│   │               │   ├── line-highlight.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-support
+│   │               │   ├── footer.css
+│   │               │   ├── plugin.yml
+│   │               │   └── support.js
+│   │               ├── reveal-menu
+│   │               │   ├── menu.css
+│   │               │   ├── menu.js
+│   │               │   ├── plugin.yml
+│   │               │   ├── quarto-menu.css
+│   │               │   └── quarto-menu.js
+│   │               ├── search
+│   │               │   ├── plugin.js
+│   │               │   ├── search.esm.js
+│   │               │   └── search.js
+│   │               └── zoom
+│   │                   ├── plugin.js
+│   │                   ├── zoom.esm.js
+│   │                   └── zoom.js
+│   ├── variables.html
+│   ├── variables.qmd
+│   ├── variables_files
+│   │   └── libs
+│   │       ├── clipboard
+│   │       │   └── clipboard.min.js
+│   │       ├── quarto-html
+│   │       │   ├── light-border.css
+│   │       │   ├── popper.min.js
+│   │       │   ├── quarto-html.min.css
+│   │       │   ├── quarto-syntax-highlighting-dark.css
+│   │       │   ├── tabby.min.js
+│   │       │   ├── tippy.css
+│   │       │   └── tippy.umd.min.js
+│   │       └── revealjs
+│   │           ├── dist
+│   │           │   ├── reset.css
+│   │           │   ├── reveal.css
+│   │           │   ├── reveal.esm.js
+│   │           │   ├── reveal.esm.js.map
+│   │           │   ├── reveal.js
+│   │           │   ├── reveal.js.map
+│   │           │   └── theme
+│   │           │       ├── fonts
+│   │           │       │   ├── league-gothic
+│   │           │       │   │   ├── LICENSE
+│   │           │       │   │   ├── league-gothic.css
+│   │           │       │   │   ├── league-gothic.eot
+│   │           │       │   │   ├── league-gothic.ttf
+│   │           │       │   │   └── league-gothic.woff
+│   │           │       │   └── source-sans-pro
+│   │           │       │       ├── LICENSE
+│   │           │       │       ├── source-sans-pro-italic.eot
+│   │           │       │       ├── source-sans-pro-italic.ttf
+│   │           │       │       ├── source-sans-pro-italic.woff
+│   │           │       │       ├── source-sans-pro-regular.eot
+│   │           │       │       ├── source-sans-pro-regular.ttf
+│   │           │       │       ├── source-sans-pro-regular.woff
+│   │           │       │       ├── source-sans-pro-semibold.eot
+│   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │           │       │       ├── source-sans-pro-semibold.woff
+│   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │           │       │       └── source-sans-pro.css
+│   │           │       └── quarto.css
+│   │           └── plugin
+│   │               ├── highlight
+│   │               │   ├── highlight.esm.js
+│   │               │   ├── highlight.js
+│   │               │   ├── monokai.css
+│   │               │   ├── plugin.js
+│   │               │   └── zenburn.css
+│   │               ├── markdown
+│   │               │   ├── markdown.esm.js
+│   │               │   ├── markdown.js
+│   │               │   └── plugin.js
+│   │               ├── math
+│   │               │   ├── katex.js
+│   │               │   ├── math.esm.js
+│   │               │   ├── math.js
+│   │               │   ├── mathjax2.js
+│   │               │   ├── mathjax3.js
+│   │               │   └── plugin.js
+│   │               ├── notes
+│   │               │   ├── notes.esm.js
+│   │               │   ├── notes.js
+│   │               │   ├── plugin.js
+│   │               │   └── speaker-view.html
+│   │               ├── pdf-export
+│   │               │   ├── pdfexport.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-line-highlight
+│   │               │   ├── line-highlight.css
+│   │               │   ├── line-highlight.js
+│   │               │   └── plugin.yml
+│   │               ├── quarto-support
+│   │               │   ├── footer.css
+│   │               │   ├── plugin.yml
+│   │               │   └── support.js
+│   │               ├── reveal-chalkboard
+│   │               │   ├── README.md
+│   │               │   ├── font-awesome
+│   │               │   │   ├── LICENSE.txt
+│   │               │   │   ├── css
+│   │               │   │   │   ├── all.css
+│   │               │   │   │   ├── brands.css
+│   │               │   │   │   ├── fontawesome.css
+│   │               │   │   │   ├── regular.css
+│   │               │   │   │   ├── solid.css
+│   │               │   │   │   ├── svg-with-js.css
+│   │               │   │   │   ├── v4-shims.css
+│   │               │   │   │   └── v4-shims.min.css
+│   │               │   │   └── webfonts
+│   │               │   │       ├── fa-brands-400.eot
+│   │               │   │       ├── fa-brands-400.svg
+│   │               │   │       ├── fa-brands-400.ttf
+│   │               │   │       ├── fa-brands-400.woff
+│   │               │   │       ├── fa-brands-400.woff2
+│   │               │   │       ├── fa-regular-400.eot
+│   │               │   │       ├── fa-regular-400.svg
+│   │               │   │       ├── fa-regular-400.ttf
+│   │               │   │       ├── fa-regular-400.woff
+│   │               │   │       ├── fa-regular-400.woff2
+│   │               │   │       ├── fa-solid-900.eot
+│   │               │   │       ├── fa-solid-900.svg
+│   │               │   │       ├── fa-solid-900.ttf
+│   │               │   │       ├── fa-solid-900.woff
+│   │               │   │       └── fa-solid-900.woff2
+│   │               │   ├── img
+│   │               │   │   ├── blackboard.png
+│   │               │   │   ├── boardmarker-black.png
+│   │               │   │   ├── boardmarker-blue.png
+│   │               │   │   ├── boardmarker-green.png
+│   │               │   │   ├── boardmarker-orange.png
+│   │               │   │   ├── boardmarker-purple.png
+│   │               │   │   ├── boardmarker-red.png
+│   │               │   │   ├── boardmarker-yellow.png
+│   │               │   │   ├── chalk-blue.png
+│   │               │   │   ├── chalk-green.png
+│   │               │   │   ├── chalk-orange.png
+│   │               │   │   ├── chalk-purple.png
+│   │               │   │   ├── chalk-red.png
+│   │               │   │   ├── chalk-white.png
+│   │               │   │   ├── chalk-yellow.png
+│   │               │   │   ├── sponge.png
+│   │               │   │   └── whiteboard.png
+│   │               │   ├── plugin.js
+│   │               │   ├── plugin.yml
+│   │               │   └── style.css
+│   │               ├── reveal-menu
+│   │               │   ├── menu.css
+│   │               │   ├── menu.js
+│   │               │   ├── plugin.yml
+│   │               │   ├── quarto-menu.css
+│   │               │   └── quarto-menu.js
+│   │               ├── search
+│   │               │   ├── plugin.js
+│   │               │   ├── search.esm.js
+│   │               │   └── search.js
+│   │               └── zoom
+│   │                   ├── plugin.js
+│   │                   ├── zoom.esm.js
+│   │                   └── zoom.js
+│   ├── workflow-I.html
+│   ├── workflow-I.qmd
+│   └── workflow-I_files
+│       └── libs
+│           ├── clipboard
+│           │   └── clipboard.min.js
+│           ├── quarto-html
+│           │   ├── light-border.css
+│           │   ├── popper.min.js
+│           │   ├── quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css
+│           │   ├── tabby.min.js
+│           │   ├── tippy.css
+│           │   └── tippy.umd.min.js
+│           └── revealjs
+│               ├── dist
+│               │   ├── reset.css
+│               │   ├── reveal.css
+│               │   ├── reveal.esm.js
+│               │   ├── reveal.esm.js.map
+│               │   ├── reveal.js
+│               │   ├── reveal.js.map
+│               │   └── theme
+│               │       ├── fonts
+│               │       │   ├── league-gothic
+│               │       │   │   ├── LICENSE
+│               │       │   │   ├── league-gothic.css
+│               │       │   │   ├── league-gothic.eot
+│               │       │   │   ├── league-gothic.ttf
+│               │       │   │   └── league-gothic.woff
+│               │       │   └── source-sans-pro
+│               │       │       ├── LICENSE
+│               │       │       ├── source-sans-pro-italic.eot
+│               │       │       ├── source-sans-pro-italic.ttf
+│               │       │       ├── source-sans-pro-italic.woff
+│               │       │       ├── source-sans-pro-regular.eot
+│               │       │       ├── source-sans-pro-regular.ttf
+│               │       │       ├── source-sans-pro-regular.woff
+│               │       │       ├── source-sans-pro-semibold.eot
+│               │       │       ├── source-sans-pro-semibold.ttf
+│               │       │       ├── source-sans-pro-semibold.woff
+│               │       │       ├── source-sans-pro-semibolditalic.eot
+│               │       │       ├── source-sans-pro-semibolditalic.ttf
+│               │       │       ├── source-sans-pro-semibolditalic.woff
+│               │       │       └── source-sans-pro.css
+│               │       └── quarto-39d1eab08b8faec97b8adc39508066ea.css
+│               └── plugin
+│                   ├── highlight
+│                   │   ├── highlight.esm.js
+│                   │   ├── highlight.js
+│                   │   ├── monokai.css
+│                   │   ├── plugin.js
+│                   │   └── zenburn.css
+│                   ├── markdown
+│                   │   ├── markdown.esm.js
+│                   │   ├── markdown.js
+│                   │   └── plugin.js
+│                   ├── math
+│                   │   ├── katex.js
+│                   │   ├── math.esm.js
+│                   │   ├── math.js
+│                   │   ├── mathjax2.js
+│                   │   ├── mathjax3.js
+│                   │   └── plugin.js
+│                   ├── notes
+│                   │   ├── notes.esm.js
+│                   │   ├── notes.js
+│                   │   ├── plugin.js
+│                   │   └── speaker-view.html
+│                   ├── pdf-export
+│                   │   ├── pdfexport.js
+│                   │   └── plugin.yml
+│                   ├── quarto-line-highlight
+│                   │   ├── line-highlight.css
+│                   │   ├── line-highlight.js
+│                   │   └── plugin.yml
+│                   ├── quarto-support
+│                   │   ├── footer.css
+│                   │   ├── plugin.yml
+│                   │   └── support.js
+│                   ├── reveal-menu
+│                   │   ├── menu.css
+│                   │   ├── menu.js
+│                   │   ├── plugin.yml
+│                   │   ├── quarto-menu.css
+│                   │   └── quarto-menu.js
+│                   ├── search
+│                   │   ├── plugin.js
+│                   │   ├── search.esm.js
+│                   │   └── search.js
+│                   └── zoom
+│                       ├── plugin.js
+│                       ├── zoom.esm.js
+│                       └── zoom.js
+├── r4r-I
+│   ├── README.md
+│   ├── _extensions
+│   │   └── r-wasm
+│   │       └── live
+│   │           ├── _extension.yml
+│   │           ├── _gradethis.qmd
+│   │           ├── _knitr.qmd
+│   │           ├── live.lua
+│   │           ├── resources
+│   │           │   ├── live-runtime.css
+│   │           │   ├── live-runtime.js
+│   │           │   ├── pyodide-worker.js
+│   │           │   └── tinyyaml.lua
+│   │           └── templates
+│   │               ├── interpolate.ojs
+│   │               ├── pyodide-editor.ojs
+│   │               ├── pyodide-evaluate.ojs
+│   │               ├── pyodide-exercise.ojs
+│   │               ├── pyodide-setup.ojs
+│   │               ├── webr-editor.ojs
+│   │               ├── webr-evaluate.ojs
+│   │               ├── webr-exercise.ojs
+│   │               ├── webr-setup.ojs
+│   │               └── webr-widget.ojs
+│   ├── capstone
+│   │   ├── _extensions
+│   │   │   ├── coatless
+│   │   │   │   └── webr
+│   │   │   │       ├── _extension.yml
+│   │   │   │       ├── qwebr-cell-elements.js
+│   │   │   │       ├── qwebr-cell-initialization.js
+│   │   │   │       ├── qwebr-compute-engine.js
+│   │   │   │       ├── qwebr-document-engine-initialization.js
+│   │   │   │       ├── qwebr-document-history.js
+│   │   │   │       ├── qwebr-document-settings.js
+│   │   │   │       ├── qwebr-document-status.js
+│   │   │   │       ├── qwebr-monaco-editor-element.js
+│   │   │   │       ├── qwebr-monaco-editor-init.html
+│   │   │   │       ├── qwebr-styling.css
+│   │   │   │       ├── qwebr-theme-switch.js
+│   │   │   │       ├── template.qmd
+│   │   │   │       └── webr.lua
+│   │   │   └── r-wasm
+│   │   │       └── live
+│   │   │           ├── _extension.yml
+│   │   │           ├── _gradethis.qmd
+│   │   │           ├── _knitr.qmd
+│   │   │           ├── live.lua
+│   │   │           ├── resources
+│   │   │           │   ├── live-runtime.css
+│   │   │           │   ├── live-runtime.js
+│   │   │           │   ├── pyodide-worker.js
+│   │   │           │   └── tinyyaml.lua
+│   │   │           └── templates
+│   │   │               ├── interpolate.ojs
+│   │   │               ├── pyodide-editor.ojs
+│   │   │               ├── pyodide-evaluate.ojs
+│   │   │               ├── pyodide-exercise.ojs
+│   │   │               ├── pyodide-setup.ojs
+│   │   │               ├── webr-editor.ojs
+│   │   │               ├── webr-evaluate.ojs
+│   │   │               ├── webr-exercise.ojs
+│   │   │               ├── webr-setup.ojs
+│   │   │               └── webr-widget.ojs
+│   │   ├── capstone-solution.R
+│   │   ├── index.html
+│   │   ├── index.qmd
+│   │   └── index_files
+│   │       └── libs
+│   │           ├── bootstrap
+│   │           │   ├── bootstrap-9b3f29d3b0fe30fa8a7dd7b9da1adc5a.min.css
+│   │           │   ├── bootstrap-icons.css
+│   │           │   ├── bootstrap-icons.woff
+│   │           │   └── bootstrap.min.js
+│   │           ├── clipboard
+│   │           │   └── clipboard.min.js
+│   │           └── quarto-html
+│   │               ├── anchor.min.js
+│   │               ├── popper.min.js
+│   │               ├── quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css
+│   │               ├── quarto.js
+│   │               ├── tabsets
+│   │               │   └── tabsets.js
+│   │               ├── tippy.css
+│   │               └── tippy.umd.min.js
+│   ├── data-structures.R
+│   ├── presentations
+│   │   ├── _extensions
+│   │   │   └── coatless
+│   │   │       └── webr
+│   │   │           ├── _extension.yml
+│   │   │           ├── qwebr-cell-elements.js
+│   │   │           ├── qwebr-cell-initialization.js
+│   │   │           ├── qwebr-compute-engine.js
+│   │   │           ├── qwebr-document-engine-initialization.js
+│   │   │           ├── qwebr-document-history.js
+│   │   │           ├── qwebr-document-settings.js
+│   │   │           ├── qwebr-document-status.js
+│   │   │           ├── qwebr-monaco-editor-element.js
+│   │   │           ├── qwebr-monaco-editor-init.html
+│   │   │           ├── qwebr-styling.css
+│   │   │           ├── qwebr-theme-switch.js
+│   │   │           ├── template.qmd
+│   │   │           └── webr.lua
+│   │   ├── capstone-intro.html
+│   │   ├── capstone-intro.qmd
+│   │   ├── capstone-intro_files
+│   │   │   └── libs
+│   │   │       ├── clipboard
+│   │   │       │   └── clipboard.min.js
+│   │   │       ├── quarto-html
+│   │   │       │   ├── light-border.css
+│   │   │       │   ├── popper.min.js
+│   │   │       │   ├── quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css
+│   │   │       │   ├── quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css
+│   │   │       │   ├── tabby.min.js
+│   │   │       │   ├── tippy.css
+│   │   │       │   └── tippy.umd.min.js
+│   │   │       └── revealjs
+│   │   │           ├── dist
+│   │   │           │   ├── reset.css
+│   │   │           │   ├── reveal.css
+│   │   │           │   ├── reveal.esm.js
+│   │   │           │   ├── reveal.esm.js.map
+│   │   │           │   ├── reveal.js
+│   │   │           │   ├── reveal.js.map
+│   │   │           │   └── theme
+│   │   │           │       ├── fonts
+│   │   │           │       │   ├── league-gothic
+│   │   │           │       │   │   ├── LICENSE
+│   │   │           │       │   │   ├── league-gothic.css
+│   │   │           │       │   │   ├── league-gothic.eot
+│   │   │           │       │   │   ├── league-gothic.ttf
+│   │   │           │       │   │   └── league-gothic.woff
+│   │   │           │       │   └── source-sans-pro
+│   │   │           │       │       ├── LICENSE
+│   │   │           │       │       ├── source-sans-pro-italic.eot
+│   │   │           │       │       ├── source-sans-pro-italic.ttf
+│   │   │           │       │       ├── source-sans-pro-italic.woff
+│   │   │           │       │       ├── source-sans-pro-regular.eot
+│   │   │           │       │       ├── source-sans-pro-regular.ttf
+│   │   │           │       │       ├── source-sans-pro-regular.woff
+│   │   │           │       │       ├── source-sans-pro-semibold.eot
+│   │   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │   │           │       │       ├── source-sans-pro-semibold.woff
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │   │           │       │       └── source-sans-pro.css
+│   │   │           │       ├── quarto-00033b64c7f4405b1251d0bf85080562.css
+│   │   │           │       ├── quarto-0c8acc74dca0c2faaedea4940f202713.css
+│   │   │           │       ├── quarto-2c1b5f745a11cfad616ebade4a4a7d24.css
+│   │   │           │       ├── quarto-340d960e8755bbda5148eb2f88c02f59.css
+│   │   │           │       ├── quarto-39d1eab08b8faec97b8adc39508066ea.css
+│   │   │           │       ├── quarto-421e21197ece528d4d1de15cb6028b12.css
+│   │   │           │       ├── quarto-8a5cdbf101a0845817b98f2425171703.css
+│   │   │           │       └── quarto-a89c3636d3310ab213cc169e1278657c.css
+│   │   │           └── plugin
+│   │   │               ├── highlight
+│   │   │               │   ├── highlight.esm.js
+│   │   │               │   ├── highlight.js
+│   │   │               │   ├── monokai.css
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── zenburn.css
+│   │   │               ├── markdown
+│   │   │               │   ├── markdown.esm.js
+│   │   │               │   ├── markdown.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── math
+│   │   │               │   ├── katex.js
+│   │   │               │   ├── math.esm.js
+│   │   │               │   ├── math.js
+│   │   │               │   ├── mathjax2.js
+│   │   │               │   ├── mathjax3.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── notes
+│   │   │               │   ├── notes.esm.js
+│   │   │               │   ├── notes.js
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── speaker-view.html
+│   │   │               ├── pdf-export
+│   │   │               │   ├── pdfexport.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-line-highlight
+│   │   │               │   ├── line-highlight.css
+│   │   │               │   ├── line-highlight.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-support
+│   │   │               │   ├── footer.css
+│   │   │               │   ├── plugin.yml
+│   │   │               │   └── support.js
+│   │   │               ├── reveal-menu
+│   │   │               │   ├── menu.css
+│   │   │               │   ├── menu.js
+│   │   │               │   ├── plugin.yml
+│   │   │               │   ├── quarto-menu.css
+│   │   │               │   └── quarto-menu.js
+│   │   │               ├── search
+│   │   │               │   ├── plugin.js
+│   │   │               │   ├── search.esm.js
+│   │   │               │   └── search.js
+│   │   │               └── zoom
+│   │   │                   ├── plugin.js
+│   │   │                   ├── zoom.esm.js
+│   │   │                   └── zoom.js
+│   │   ├── capstone-project.png
+│   │   ├── complete-example-data-structures.html
+│   │   ├── complete-example-data-structures.qmd
+│   │   ├── complete-example-data-structures_files
+│   │   │   └── libs
+│   │   │       ├── bootstrap
+│   │   │       │   ├── bootstrap-9b3f29d3b0fe30fa8a7dd7b9da1adc5a.min.css
+│   │   │       │   ├── bootstrap-f1f29bbdfb00dfb2b86572197e3920f4.min.css
+│   │   │       │   ├── bootstrap-icons.css
+│   │   │       │   ├── bootstrap-icons.woff
+│   │   │       │   └── bootstrap.min.js
+│   │   │       ├── clipboard
+│   │   │       │   └── clipboard.min.js
+│   │   │       ├── quarto-html
+│   │   │       │   ├── anchor.min.js
+│   │   │       │   ├── light-border.css
+│   │   │       │   ├── popper.min.js
+│   │   │       │   ├── quarto-syntax-highlighting-dark-7271f29f9498218151f3120baddb7363.css
+│   │   │       │   ├── quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css
+│   │   │       │   ├── quarto.js
+│   │   │       │   ├── tabby.min.js
+│   │   │       │   ├── tabsets
+│   │   │       │   │   └── tabsets.js
+│   │   │       │   ├── tippy.css
+│   │   │       │   └── tippy.umd.min.js
+│   │   │       └── revealjs
+│   │   │           ├── dist
+│   │   │           │   ├── reset.css
+│   │   │           │   ├── reveal.css
+│   │   │           │   ├── reveal.esm.js
+│   │   │           │   ├── reveal.esm.js.map
+│   │   │           │   ├── reveal.js
+│   │   │           │   ├── reveal.js.map
+│   │   │           │   └── theme
+│   │   │           │       ├── fonts
+│   │   │           │       │   ├── league-gothic
+│   │   │           │       │   │   ├── LICENSE
+│   │   │           │       │   │   ├── league-gothic.css
+│   │   │           │       │   │   ├── league-gothic.eot
+│   │   │           │       │   │   ├── league-gothic.ttf
+│   │   │           │       │   │   └── league-gothic.woff
+│   │   │           │       │   └── source-sans-pro
+│   │   │           │       │       ├── LICENSE
+│   │   │           │       │       ├── source-sans-pro-italic.eot
+│   │   │           │       │       ├── source-sans-pro-italic.ttf
+│   │   │           │       │       ├── source-sans-pro-italic.woff
+│   │   │           │       │       ├── source-sans-pro-regular.eot
+│   │   │           │       │       ├── source-sans-pro-regular.ttf
+│   │   │           │       │       ├── source-sans-pro-regular.woff
+│   │   │           │       │       ├── source-sans-pro-semibold.eot
+│   │   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │   │           │       │       ├── source-sans-pro-semibold.woff
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │   │           │       │       └── source-sans-pro.css
+│   │   │           │       ├── quarto-37e33c7fd5cc18d8f701aa2e9bb826ce.css
+│   │   │           │       ├── quarto-8d9306e87da1988297dfb438703b3ecc.css
+│   │   │           │       └── quarto-e47a7bee3dbf43309fdd883fe45de79b.css
+│   │   │           └── plugin
+│   │   │               ├── highlight
+│   │   │               │   ├── highlight.esm.js
+│   │   │               │   ├── highlight.js
+│   │   │               │   ├── monokai.css
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── zenburn.css
+│   │   │               ├── markdown
+│   │   │               │   ├── markdown.esm.js
+│   │   │               │   ├── markdown.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── math
+│   │   │               │   ├── katex.js
+│   │   │               │   ├── math.esm.js
+│   │   │               │   ├── math.js
+│   │   │               │   ├── mathjax2.js
+│   │   │               │   ├── mathjax3.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── notes
+│   │   │               │   ├── notes.esm.js
+│   │   │               │   ├── notes.js
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── speaker-view.html
+│   │   │               ├── pdf-export
+│   │   │               │   ├── pdfexport.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-line-highlight
+│   │   │               │   ├── line-highlight.css
+│   │   │               │   ├── line-highlight.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-support
+│   │   │               │   ├── footer.css
+│   │   │               │   ├── plugin.yml
+│   │   │               │   └── support.js
+│   │   │               ├── reveal-chalkboard
+│   │   │               │   ├── README.md
+│   │   │               │   ├── font-awesome
+│   │   │               │   │   ├── LICENSE.txt
+│   │   │               │   │   ├── css
+│   │   │               │   │   │   ├── all.css
+│   │   │               │   │   │   ├── brands.css
+│   │   │               │   │   │   ├── fontawesome.css
+│   │   │               │   │   │   ├── regular.css
+│   │   │               │   │   │   ├── solid.css
+│   │   │               │   │   │   ├── svg-with-js.css
+│   │   │               │   │   │   ├── v4-shims.css
+│   │   │               │   │   │   └── v4-shims.min.css
+│   │   │               │   │   └── webfonts
+│   │   │               │   │       ├── fa-brands-400.eot
+│   │   │               │   │       ├── fa-brands-400.svg
+│   │   │               │   │       ├── fa-brands-400.ttf
+│   │   │               │   │       ├── fa-brands-400.woff
+│   │   │               │   │       ├── fa-brands-400.woff2
+│   │   │               │   │       ├── fa-regular-400.eot
+│   │   │               │   │       ├── fa-regular-400.svg
+│   │   │               │   │       ├── fa-regular-400.ttf
+│   │   │               │   │       ├── fa-regular-400.woff
+│   │   │               │   │       ├── fa-regular-400.woff2
+│   │   │               │   │       ├── fa-solid-900.eot
+│   │   │               │   │       ├── fa-solid-900.svg
+│   │   │               │   │       ├── fa-solid-900.ttf
+│   │   │               │   │       ├── fa-solid-900.woff
+│   │   │               │   │       └── fa-solid-900.woff2
+│   │   │               │   ├── img
+│   │   │               │   │   ├── blackboard.png
+│   │   │               │   │   ├── boardmarker-black.png
+│   │   │               │   │   ├── boardmarker-blue.png
+│   │   │               │   │   ├── boardmarker-green.png
+│   │   │               │   │   ├── boardmarker-orange.png
+│   │   │               │   │   ├── boardmarker-purple.png
+│   │   │               │   │   ├── boardmarker-red.png
+│   │   │               │   │   ├── boardmarker-yellow.png
+│   │   │               │   │   ├── chalk-blue.png
+│   │   │               │   │   ├── chalk-green.png
+│   │   │               │   │   ├── chalk-orange.png
+│   │   │               │   │   ├── chalk-purple.png
+│   │   │               │   │   ├── chalk-red.png
+│   │   │               │   │   ├── chalk-white.png
+│   │   │               │   │   ├── chalk-yellow.png
+│   │   │               │   │   ├── sponge.png
+│   │   │               │   │   └── whiteboard.png
+│   │   │               │   ├── plugin.js
+│   │   │               │   ├── plugin.yml
+│   │   │               │   └── style.css
+│   │   │               ├── reveal-menu
+│   │   │               │   ├── menu.css
+│   │   │               │   ├── menu.js
+│   │   │               │   ├── plugin.yml
+│   │   │               │   ├── quarto-menu.css
+│   │   │               │   └── quarto-menu.js
+│   │   │               ├── search
+│   │   │               │   ├── plugin.js
+│   │   │               │   ├── search.esm.js
+│   │   │               │   └── search.js
+│   │   │               └── zoom
+│   │   │                   ├── plugin.js
+│   │   │                   ├── zoom.esm.js
+│   │   │                   └── zoom.js
+│   │   ├── congratulaions.html
+│   │   ├── congratulaions.qmd
+│   │   ├── congratulaions_files
+│   │   │   └── libs
+│   │   │       ├── clipboard
+│   │   │       │   └── clipboard.min.js
+│   │   │       ├── quarto-html
+│   │   │       │   ├── light-border.css
+│   │   │       │   ├── popper.min.js
+│   │   │       │   ├── quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css
+│   │   │       │   ├── tabby.min.js
+│   │   │       │   ├── tippy.css
+│   │   │       │   └── tippy.umd.min.js
+│   │   │       └── revealjs
+│   │   │           ├── dist
+│   │   │           │   ├── reset.css
+│   │   │           │   ├── reveal.css
+│   │   │           │   ├── reveal.esm.js
+│   │   │           │   ├── reveal.esm.js.map
+│   │   │           │   ├── reveal.js
+│   │   │           │   ├── reveal.js.map
+│   │   │           │   └── theme
+│   │   │           │       ├── fonts
+│   │   │           │       │   ├── league-gothic
+│   │   │           │       │   │   ├── LICENSE
+│   │   │           │       │   │   ├── league-gothic.css
+│   │   │           │       │   │   ├── league-gothic.eot
+│   │   │           │       │   │   ├── league-gothic.ttf
+│   │   │           │       │   │   └── league-gothic.woff
+│   │   │           │       │   └── source-sans-pro
+│   │   │           │       │       ├── LICENSE
+│   │   │           │       │       ├── source-sans-pro-italic.eot
+│   │   │           │       │       ├── source-sans-pro-italic.ttf
+│   │   │           │       │       ├── source-sans-pro-italic.woff
+│   │   │           │       │       ├── source-sans-pro-regular.eot
+│   │   │           │       │       ├── source-sans-pro-regular.ttf
+│   │   │           │       │       ├── source-sans-pro-regular.woff
+│   │   │           │       │       ├── source-sans-pro-semibold.eot
+│   │   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │   │           │       │       ├── source-sans-pro-semibold.woff
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │   │           │       │       └── source-sans-pro.css
+│   │   │           │       └── quarto-39d1eab08b8faec97b8adc39508066ea.css
+│   │   │           └── plugin
+│   │   │               ├── highlight
+│   │   │               │   ├── highlight.esm.js
+│   │   │               │   ├── highlight.js
+│   │   │               │   ├── monokai.css
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── zenburn.css
+│   │   │               ├── markdown
+│   │   │               │   ├── markdown.esm.js
+│   │   │               │   ├── markdown.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── math
+│   │   │               │   ├── katex.js
+│   │   │               │   ├── math.esm.js
+│   │   │               │   ├── math.js
+│   │   │               │   ├── mathjax2.js
+│   │   │               │   ├── mathjax3.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── notes
+│   │   │               │   ├── notes.esm.js
+│   │   │               │   ├── notes.js
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── speaker-view.html
+│   │   │               ├── pdf-export
+│   │   │               │   ├── pdfexport.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-line-highlight
+│   │   │               │   ├── line-highlight.css
+│   │   │               │   ├── line-highlight.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-support
+│   │   │               │   ├── footer.css
+│   │   │               │   ├── plugin.yml
+│   │   │               │   └── support.js
+│   │   │               ├── reveal-menu
+│   │   │               │   ├── menu.css
+│   │   │               │   ├── menu.js
+│   │   │               │   ├── plugin.yml
+│   │   │               │   ├── quarto-menu.css
+│   │   │               │   └── quarto-menu.js
+│   │   │               ├── search
+│   │   │               │   ├── plugin.js
+│   │   │               │   ├── search.esm.js
+│   │   │               │   └── search.js
+│   │   │               └── zoom
+│   │   │                   ├── plugin.js
+│   │   │                   ├── zoom.esm.js
+│   │   │                   └── zoom.js
+│   │   ├── control-structure.html
+│   │   ├── control-structure.qmd
+│   │   ├── control-structure.quarto_ipynb
+│   │   ├── control-structure_files
+│   │   │   └── libs
+│   │   │       ├── clipboard
+│   │   │       │   └── clipboard.min.js
+│   │   │       ├── quarto-html
+│   │   │       │   ├── light-border.css
+│   │   │       │   ├── popper.min.js
+│   │   │       │   ├── quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css
+│   │   │       │   ├── tabby.min.js
+│   │   │       │   ├── tippy.css
+│   │   │       │   └── tippy.umd.min.js
+│   │   │       └── revealjs
+│   │   │           ├── dist
+│   │   │           │   ├── reset.css
+│   │   │           │   ├── reveal.css
+│   │   │           │   ├── reveal.esm.js
+│   │   │           │   ├── reveal.esm.js.map
+│   │   │           │   ├── reveal.js
+│   │   │           │   ├── reveal.js.map
+│   │   │           │   └── theme
+│   │   │           │       ├── fonts
+│   │   │           │       │   ├── league-gothic
+│   │   │           │       │   │   ├── LICENSE
+│   │   │           │       │   │   ├── league-gothic.css
+│   │   │           │       │   │   ├── league-gothic.eot
+│   │   │           │       │   │   ├── league-gothic.ttf
+│   │   │           │       │   │   └── league-gothic.woff
+│   │   │           │       │   └── source-sans-pro
+│   │   │           │       │       ├── LICENSE
+│   │   │           │       │       ├── source-sans-pro-italic.eot
+│   │   │           │       │       ├── source-sans-pro-italic.ttf
+│   │   │           │       │       ├── source-sans-pro-italic.woff
+│   │   │           │       │       ├── source-sans-pro-regular.eot
+│   │   │           │       │       ├── source-sans-pro-regular.ttf
+│   │   │           │       │       ├── source-sans-pro-regular.woff
+│   │   │           │       │       ├── source-sans-pro-semibold.eot
+│   │   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │   │           │       │       ├── source-sans-pro-semibold.woff
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │   │           │       │       └── source-sans-pro.css
+│   │   │           │       └── quarto-c2204bade40a765dc4872cb3627aba86.css
+│   │   │           └── plugin
+│   │   │               ├── highlight
+│   │   │               │   ├── highlight.esm.js
+│   │   │               │   ├── highlight.js
+│   │   │               │   ├── monokai.css
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── zenburn.css
+│   │   │               ├── markdown
+│   │   │               │   ├── markdown.esm.js
+│   │   │               │   ├── markdown.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── math
+│   │   │               │   ├── katex.js
+│   │   │               │   ├── math.esm.js
+│   │   │               │   ├── math.js
+│   │   │               │   ├── mathjax2.js
+│   │   │               │   ├── mathjax3.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── notes
+│   │   │               │   ├── notes.esm.js
+│   │   │               │   ├── notes.js
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── speaker-view.html
+│   │   │               ├── pdf-export
+│   │   │               │   ├── pdfexport.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-line-highlight
+│   │   │               │   ├── line-highlight.css
+│   │   │               │   ├── line-highlight.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-support
+│   │   │               │   ├── footer.css
+│   │   │               │   ├── plugin.yml
+│   │   │               │   └── support.js
+│   │   │               ├── reveal-menu
+│   │   │               │   ├── menu.css
+│   │   │               │   ├── menu.js
+│   │   │               │   ├── plugin.yml
+│   │   │               │   ├── quarto-menu.css
+│   │   │               │   └── quarto-menu.js
+│   │   │               ├── search
+│   │   │               │   ├── plugin.js
+│   │   │               │   ├── search.esm.js
+│   │   │               │   └── search.js
+│   │   │               └── zoom
+│   │   │                   ├── plugin.js
+│   │   │                   ├── zoom.esm.js
+│   │   │                   └── zoom.js
+│   │   ├── course-intro.html
+│   │   ├── course-intro.qmd
+│   │   ├── course-intro_files
+│   │   │   └── libs
+│   │   │       ├── clipboard
+│   │   │       │   └── clipboard.min.js
+│   │   │       ├── quarto-html
+│   │   │       │   ├── light-border.css
+│   │   │       │   ├── popper.min.js
+│   │   │       │   ├── quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css
+│   │   │       │   ├── quarto-syntax-highlighting-dark-7271f29f9498218151f3120baddb7363.css
+│   │   │       │   ├── tabby.min.js
+│   │   │       │   ├── tippy.css
+│   │   │       │   └── tippy.umd.min.js
+│   │   │       └── revealjs
+│   │   │           ├── dist
+│   │   │           │   ├── reset.css
+│   │   │           │   ├── reveal.css
+│   │   │           │   ├── reveal.esm.js
+│   │   │           │   ├── reveal.esm.js.map
+│   │   │           │   ├── reveal.js
+│   │   │           │   ├── reveal.js.map
+│   │   │           │   └── theme
+│   │   │           │       ├── fonts
+│   │   │           │       │   ├── league-gothic
+│   │   │           │       │   │   ├── LICENSE
+│   │   │           │       │   │   ├── league-gothic.css
+│   │   │           │       │   │   ├── league-gothic.eot
+│   │   │           │       │   │   ├── league-gothic.ttf
+│   │   │           │       │   │   └── league-gothic.woff
+│   │   │           │       │   └── source-sans-pro
+│   │   │           │       │       ├── LICENSE
+│   │   │           │       │       ├── source-sans-pro-italic.eot
+│   │   │           │       │       ├── source-sans-pro-italic.ttf
+│   │   │           │       │       ├── source-sans-pro-italic.woff
+│   │   │           │       │       ├── source-sans-pro-regular.eot
+│   │   │           │       │       ├── source-sans-pro-regular.ttf
+│   │   │           │       │       ├── source-sans-pro-regular.woff
+│   │   │           │       │       ├── source-sans-pro-semibold.eot
+│   │   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │   │           │       │       ├── source-sans-pro-semibold.woff
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │   │           │       │       └── source-sans-pro.css
+│   │   │           │       ├── quarto-00ac2f6af1389919a18f42df5b7c0002.css
+│   │   │           │       ├── quarto-226ed3c72bfd61863303a8d54728a120.css
+│   │   │           │       ├── quarto-250687541b6fd0303e6fa9a425de9713.css
+│   │   │           │       ├── quarto-37e33c7fd5cc18d8f701aa2e9bb826ce.css
+│   │   │           │       ├── quarto-8d44ddfa7ca2b144a7bece2f52dd27e9.css
+│   │   │           │       ├── quarto-a4d0b8bc80fdc8a3d4f7e85676168896.css
+│   │   │           │       ├── quarto-a7ae102ff4c0744d6025bcfd63e1c29a.css
+│   │   │           │       └── quarto-c2204bade40a765dc4872cb3627aba86.css
+│   │   │           └── plugin
+│   │   │               ├── highlight
+│   │   │               │   ├── highlight.esm.js
+│   │   │               │   ├── highlight.js
+│   │   │               │   ├── monokai.css
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── zenburn.css
+│   │   │               ├── markdown
+│   │   │               │   ├── markdown.esm.js
+│   │   │               │   ├── markdown.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── math
+│   │   │               │   ├── katex.js
+│   │   │               │   ├── math.esm.js
+│   │   │               │   ├── math.js
+│   │   │               │   ├── mathjax2.js
+│   │   │               │   ├── mathjax3.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── notes
+│   │   │               │   ├── notes.esm.js
+│   │   │               │   ├── notes.js
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── speaker-view.html
+│   │   │               ├── pdf-export
+│   │   │               │   ├── pdfexport.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-line-highlight
+│   │   │               │   ├── line-highlight.css
+│   │   │               │   ├── line-highlight.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-support
+│   │   │               │   ├── footer.css
+│   │   │               │   ├── plugin.yml
+│   │   │               │   └── support.js
+│   │   │               ├── reveal-menu
+│   │   │               │   ├── menu.css
+│   │   │               │   ├── menu.js
+│   │   │               │   ├── plugin.yml
+│   │   │               │   ├── quarto-menu.css
+│   │   │               │   └── quarto-menu.js
+│   │   │               ├── search
+│   │   │               │   ├── plugin.js
+│   │   │               │   ├── search.esm.js
+│   │   │               │   └── search.js
+│   │   │               └── zoom
+│   │   │                   ├── plugin.js
+│   │   │                   ├── zoom.esm.js
+│   │   │                   └── zoom.js
+│   │   ├── data-structures.jpg
+│   │   ├── data_structures_in_r.html
+│   │   ├── data_structures_in_r.qmd
+│   │   ├── data_structures_in_r_files
+│   │   │   └── libs
+│   │   │       ├── clipboard
+│   │   │       │   └── clipboard.min.js
+│   │   │       ├── quarto-html
+│   │   │       │   ├── light-border.css
+│   │   │       │   ├── popper.min.js
+│   │   │       │   ├── quarto-html.min.css
+│   │   │       │   ├── quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css
+│   │   │       │   ├── quarto-syntax-highlighting-dark.css
+│   │   │       │   ├── tabby.min.js
+│   │   │       │   ├── tippy.css
+│   │   │       │   └── tippy.umd.min.js
+│   │   │       └── revealjs
+│   │   │           ├── dist
+│   │   │           │   ├── reset.css
+│   │   │           │   ├── reveal.css
+│   │   │           │   ├── reveal.esm.js
+│   │   │           │   ├── reveal.esm.js.map
+│   │   │           │   ├── reveal.js
+│   │   │           │   ├── reveal.js.map
+│   │   │           │   └── theme
+│   │   │           │       ├── fonts
+│   │   │           │       │   ├── league-gothic
+│   │   │           │       │   │   ├── LICENSE
+│   │   │           │       │   │   ├── league-gothic.css
+│   │   │           │       │   │   ├── league-gothic.eot
+│   │   │           │       │   │   ├── league-gothic.ttf
+│   │   │           │       │   │   └── league-gothic.woff
+│   │   │           │       │   └── source-sans-pro
+│   │   │           │       │       ├── LICENSE
+│   │   │           │       │       ├── source-sans-pro-italic.eot
+│   │   │           │       │       ├── source-sans-pro-italic.ttf
+│   │   │           │       │       ├── source-sans-pro-italic.woff
+│   │   │           │       │       ├── source-sans-pro-regular.eot
+│   │   │           │       │       ├── source-sans-pro-regular.ttf
+│   │   │           │       │       ├── source-sans-pro-regular.woff
+│   │   │           │       │       ├── source-sans-pro-semibold.eot
+│   │   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │   │           │       │       ├── source-sans-pro-semibold.woff
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │   │           │       │       └── source-sans-pro.css
+│   │   │           │       ├── quarto-5b48f34d633aed70c74c672477009ffc.css
+│   │   │           │       └── quarto.css
+│   │   │           └── plugin
+│   │   │               ├── highlight
+│   │   │               │   ├── highlight.esm.js
+│   │   │               │   ├── highlight.js
+│   │   │               │   ├── monokai.css
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── zenburn.css
+│   │   │               ├── markdown
+│   │   │               │   ├── markdown.esm.js
+│   │   │               │   ├── markdown.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── math
+│   │   │               │   ├── katex.js
+│   │   │               │   ├── math.esm.js
+│   │   │               │   ├── math.js
+│   │   │               │   ├── mathjax2.js
+│   │   │               │   ├── mathjax3.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── notes
+│   │   │               │   ├── notes.esm.js
+│   │   │               │   ├── notes.js
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── speaker-view.html
+│   │   │               ├── pdf-export
+│   │   │               │   ├── pdfexport.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-line-highlight
+│   │   │               │   ├── line-highlight.css
+│   │   │               │   ├── line-highlight.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-support
+│   │   │               │   ├── footer.css
+│   │   │               │   ├── plugin.yml
+│   │   │               │   └── support.js
+│   │   │               ├── reveal-chalkboard
+│   │   │               │   ├── README.md
+│   │   │               │   ├── font-awesome
+│   │   │               │   │   ├── LICENSE.txt
+│   │   │               │   │   ├── css
+│   │   │               │   │   │   ├── all.css
+│   │   │               │   │   │   ├── brands.css
+│   │   │               │   │   │   ├── fontawesome.css
+│   │   │               │   │   │   ├── regular.css
+│   │   │               │   │   │   ├── solid.css
+│   │   │               │   │   │   ├── svg-with-js.css
+│   │   │               │   │   │   ├── v4-shims.css
+│   │   │               │   │   │   └── v4-shims.min.css
+│   │   │               │   │   └── webfonts
+│   │   │               │   │       ├── fa-brands-400.eot
+│   │   │               │   │       ├── fa-brands-400.svg
+│   │   │               │   │       ├── fa-brands-400.ttf
+│   │   │               │   │       ├── fa-brands-400.woff
+│   │   │               │   │       ├── fa-brands-400.woff2
+│   │   │               │   │       ├── fa-regular-400.eot
+│   │   │               │   │       ├── fa-regular-400.svg
+│   │   │               │   │       ├── fa-regular-400.ttf
+│   │   │               │   │       ├── fa-regular-400.woff
+│   │   │               │   │       ├── fa-regular-400.woff2
+│   │   │               │   │       ├── fa-solid-900.eot
+│   │   │               │   │       ├── fa-solid-900.svg
+│   │   │               │   │       ├── fa-solid-900.ttf
+│   │   │               │   │       ├── fa-solid-900.woff
+│   │   │               │   │       └── fa-solid-900.woff2
+│   │   │               │   ├── img
+│   │   │               │   │   ├── blackboard.png
+│   │   │               │   │   ├── boardmarker-black.png
+│   │   │               │   │   ├── boardmarker-blue.png
+│   │   │               │   │   ├── boardmarker-green.png
+│   │   │               │   │   ├── boardmarker-orange.png
+│   │   │               │   │   ├── boardmarker-purple.png
+│   │   │               │   │   ├── boardmarker-red.png
+│   │   │               │   │   ├── boardmarker-yellow.png
+│   │   │               │   │   ├── chalk-blue.png
+│   │   │               │   │   ├── chalk-green.png
+│   │   │               │   │   ├── chalk-orange.png
+│   │   │               │   │   ├── chalk-purple.png
+│   │   │               │   │   ├── chalk-red.png
+│   │   │               │   │   ├── chalk-white.png
+│   │   │               │   │   ├── chalk-yellow.png
+│   │   │               │   │   ├── sponge.png
+│   │   │               │   │   └── whiteboard.png
+│   │   │               │   ├── plugin.js
+│   │   │               │   ├── plugin.yml
+│   │   │               │   └── style.css
+│   │   │               ├── reveal-menu
+│   │   │               │   ├── menu.css
+│   │   │               │   ├── menu.js
+│   │   │               │   ├── plugin.yml
+│   │   │               │   ├── quarto-menu.css
+│   │   │               │   └── quarto-menu.js
+│   │   │               ├── search
+│   │   │               │   ├── plugin.js
+│   │   │               │   ├── search.esm.js
+│   │   │               │   └── search.js
+│   │   │               └── zoom
+│   │   │                   ├── plugin.js
+│   │   │                   ├── zoom.esm.js
+│   │   │                   └── zoom.js
+│   │   ├── factors-presentation.html
+│   │   ├── factors-presentation.qmd
+│   │   ├── factors-presentation_files
+│   │   │   └── libs
+│   │   │       ├── clipboard
+│   │   │       │   └── clipboard.min.js
+│   │   │       ├── quarto-html
+│   │   │       │   ├── light-border.css
+│   │   │       │   ├── popper.min.js
+│   │   │       │   ├── quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css
+│   │   │       │   ├── tabby.min.js
+│   │   │       │   ├── tippy.css
+│   │   │       │   └── tippy.umd.min.js
+│   │   │       └── revealjs
+│   │   │           ├── dist
+│   │   │           │   ├── reset.css
+│   │   │           │   ├── reveal.css
+│   │   │           │   ├── reveal.esm.js
+│   │   │           │   ├── reveal.esm.js.map
+│   │   │           │   ├── reveal.js
+│   │   │           │   ├── reveal.js.map
+│   │   │           │   └── theme
+│   │   │           │       ├── fonts
+│   │   │           │       │   ├── league-gothic
+│   │   │           │       │   │   ├── LICENSE
+│   │   │           │       │   │   ├── league-gothic.css
+│   │   │           │       │   │   ├── league-gothic.eot
+│   │   │           │       │   │   ├── league-gothic.ttf
+│   │   │           │       │   │   └── league-gothic.woff
+│   │   │           │       │   └── source-sans-pro
+│   │   │           │       │       ├── LICENSE
+│   │   │           │       │       ├── source-sans-pro-italic.eot
+│   │   │           │       │       ├── source-sans-pro-italic.ttf
+│   │   │           │       │       ├── source-sans-pro-italic.woff
+│   │   │           │       │       ├── source-sans-pro-regular.eot
+│   │   │           │       │       ├── source-sans-pro-regular.ttf
+│   │   │           │       │       ├── source-sans-pro-regular.woff
+│   │   │           │       │       ├── source-sans-pro-semibold.eot
+│   │   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │   │           │       │       ├── source-sans-pro-semibold.woff
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │   │           │       │       └── source-sans-pro.css
+│   │   │           │       └── quarto-5b48f34d633aed70c74c672477009ffc.css
+│   │   │           └── plugin
+│   │   │               ├── highlight
+│   │   │               │   ├── highlight.esm.js
+│   │   │               │   ├── highlight.js
+│   │   │               │   ├── monokai.css
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── zenburn.css
+│   │   │               ├── markdown
+│   │   │               │   ├── markdown.esm.js
+│   │   │               │   ├── markdown.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── math
+│   │   │               │   ├── katex.js
+│   │   │               │   ├── math.esm.js
+│   │   │               │   ├── math.js
+│   │   │               │   ├── mathjax2.js
+│   │   │               │   ├── mathjax3.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── notes
+│   │   │               │   ├── notes.esm.js
+│   │   │               │   ├── notes.js
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── speaker-view.html
+│   │   │               ├── pdf-export
+│   │   │               │   ├── pdfexport.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-line-highlight
+│   │   │               │   ├── line-highlight.css
+│   │   │               │   ├── line-highlight.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-support
+│   │   │               │   ├── footer.css
+│   │   │               │   ├── plugin.yml
+│   │   │               │   └── support.js
+│   │   │               ├── reveal-menu
+│   │   │               │   ├── menu.css
+│   │   │               │   ├── menu.js
+│   │   │               │   ├── plugin.yml
+│   │   │               │   ├── quarto-menu.css
+│   │   │               │   └── quarto-menu.js
+│   │   │               ├── search
+│   │   │               │   ├── plugin.js
+│   │   │               │   ├── search.esm.js
+│   │   │               │   └── search.js
+│   │   │               └── zoom
+│   │   │                   ├── plugin.js
+│   │   │                   ├── zoom.esm.js
+│   │   │                   └── zoom.js
+│   │   ├── for-while.png
+│   │   ├── functions.html
+│   │   ├── functions.qmd
+│   │   ├── functions_files
+│   │   │   └── libs
+│   │   │       ├── clipboard
+│   │   │       │   └── clipboard.min.js
+│   │   │       ├── quarto-html
+│   │   │       │   ├── light-border.css
+│   │   │       │   ├── popper.min.js
+│   │   │       │   ├── quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css
+│   │   │       │   ├── tabby.min.js
+│   │   │       │   ├── tippy.css
+│   │   │       │   └── tippy.umd.min.js
+│   │   │       └── revealjs
+│   │   │           ├── dist
+│   │   │           │   ├── reset.css
+│   │   │           │   ├── reveal.css
+│   │   │           │   ├── reveal.esm.js
+│   │   │           │   ├── reveal.esm.js.map
+│   │   │           │   ├── reveal.js
+│   │   │           │   ├── reveal.js.map
+│   │   │           │   └── theme
+│   │   │           │       ├── fonts
+│   │   │           │       │   ├── league-gothic
+│   │   │           │       │   │   ├── LICENSE
+│   │   │           │       │   │   ├── league-gothic.css
+│   │   │           │       │   │   ├── league-gothic.eot
+│   │   │           │       │   │   ├── league-gothic.ttf
+│   │   │           │       │   │   └── league-gothic.woff
+│   │   │           │       │   └── source-sans-pro
+│   │   │           │       │       ├── LICENSE
+│   │   │           │       │       ├── source-sans-pro-italic.eot
+│   │   │           │       │       ├── source-sans-pro-italic.ttf
+│   │   │           │       │       ├── source-sans-pro-italic.woff
+│   │   │           │       │       ├── source-sans-pro-regular.eot
+│   │   │           │       │       ├── source-sans-pro-regular.ttf
+│   │   │           │       │       ├── source-sans-pro-regular.woff
+│   │   │           │       │       ├── source-sans-pro-semibold.eot
+│   │   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │   │           │       │       ├── source-sans-pro-semibold.woff
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │   │           │       │       └── source-sans-pro.css
+│   │   │           │       └── quarto-5b48f34d633aed70c74c672477009ffc.css
+│   │   │           └── plugin
+│   │   │               ├── highlight
+│   │   │               │   ├── highlight.esm.js
+│   │   │               │   ├── highlight.js
+│   │   │               │   ├── monokai.css
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── zenburn.css
+│   │   │               ├── markdown
+│   │   │               │   ├── markdown.esm.js
+│   │   │               │   ├── markdown.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── math
+│   │   │               │   ├── katex.js
+│   │   │               │   ├── math.esm.js
+│   │   │               │   ├── math.js
+│   │   │               │   ├── mathjax2.js
+│   │   │               │   ├── mathjax3.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── notes
+│   │   │               │   ├── notes.esm.js
+│   │   │               │   ├── notes.js
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── speaker-view.html
+│   │   │               ├── pdf-export
+│   │   │               │   ├── pdfexport.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-line-highlight
+│   │   │               │   ├── line-highlight.css
+│   │   │               │   ├── line-highlight.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-support
+│   │   │               │   ├── footer.css
+│   │   │               │   ├── plugin.yml
+│   │   │               │   └── support.js
+│   │   │               ├── reveal-menu
+│   │   │               │   ├── menu.css
+│   │   │               │   ├── menu.js
+│   │   │               │   ├── plugin.yml
+│   │   │               │   ├── quarto-menu.css
+│   │   │               │   └── quarto-menu.js
+│   │   │               ├── search
+│   │   │               │   ├── plugin.js
+│   │   │               │   ├── search.esm.js
+│   │   │               │   └── search.js
+│   │   │               └── zoom
+│   │   │                   ├── plugin.js
+│   │   │                   ├── zoom.esm.js
+│   │   │                   └── zoom.js
+│   │   ├── if-switch.png
+│   │   ├── packages.html
+│   │   ├── packages.qmd
+│   │   ├── packages_files
+│   │   │   └── libs
+│   │   │       ├── clipboard
+│   │   │       │   └── clipboard.min.js
+│   │   │       ├── quarto-html
+│   │   │       │   ├── light-border.css
+│   │   │       │   ├── popper.min.js
+│   │   │       │   ├── quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css
+│   │   │       │   ├── tabby.min.js
+│   │   │       │   ├── tippy.css
+│   │   │       │   └── tippy.umd.min.js
+│   │   │       └── revealjs
+│   │   │           ├── dist
+│   │   │           │   ├── reset.css
+│   │   │           │   ├── reveal.css
+│   │   │           │   ├── reveal.esm.js
+│   │   │           │   ├── reveal.esm.js.map
+│   │   │           │   ├── reveal.js
+│   │   │           │   ├── reveal.js.map
+│   │   │           │   └── theme
+│   │   │           │       ├── fonts
+│   │   │           │       │   ├── league-gothic
+│   │   │           │       │   │   ├── LICENSE
+│   │   │           │       │   │   ├── league-gothic.css
+│   │   │           │       │   │   ├── league-gothic.eot
+│   │   │           │       │   │   ├── league-gothic.ttf
+│   │   │           │       │   │   └── league-gothic.woff
+│   │   │           │       │   └── source-sans-pro
+│   │   │           │       │       ├── LICENSE
+│   │   │           │       │       ├── source-sans-pro-italic.eot
+│   │   │           │       │       ├── source-sans-pro-italic.ttf
+│   │   │           │       │       ├── source-sans-pro-italic.woff
+│   │   │           │       │       ├── source-sans-pro-regular.eot
+│   │   │           │       │       ├── source-sans-pro-regular.ttf
+│   │   │           │       │       ├── source-sans-pro-regular.woff
+│   │   │           │       │       ├── source-sans-pro-semibold.eot
+│   │   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │   │           │       │       ├── source-sans-pro-semibold.woff
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │   │           │       │       └── source-sans-pro.css
+│   │   │           │       └── quarto-39d1eab08b8faec97b8adc39508066ea.css
+│   │   │           └── plugin
+│   │   │               ├── highlight
+│   │   │               │   ├── highlight.esm.js
+│   │   │               │   ├── highlight.js
+│   │   │               │   ├── monokai.css
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── zenburn.css
+│   │   │               ├── markdown
+│   │   │               │   ├── markdown.esm.js
+│   │   │               │   ├── markdown.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── math
+│   │   │               │   ├── katex.js
+│   │   │               │   ├── math.esm.js
+│   │   │               │   ├── math.js
+│   │   │               │   ├── mathjax2.js
+│   │   │               │   ├── mathjax3.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── notes
+│   │   │               │   ├── notes.esm.js
+│   │   │               │   ├── notes.js
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── speaker-view.html
+│   │   │               ├── pdf-export
+│   │   │               │   ├── pdfexport.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-line-highlight
+│   │   │               │   ├── line-highlight.css
+│   │   │               │   ├── line-highlight.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-support
+│   │   │               │   ├── footer.css
+│   │   │               │   ├── plugin.yml
+│   │   │               │   └── support.js
+│   │   │               ├── reveal-menu
+│   │   │               │   ├── menu.css
+│   │   │               │   ├── menu.js
+│   │   │               │   ├── plugin.yml
+│   │   │               │   ├── quarto-menu.css
+│   │   │               │   └── quarto-menu.js
+│   │   │               ├── search
+│   │   │               │   ├── plugin.js
+│   │   │               │   ├── search.esm.js
+│   │   │               │   └── search.js
+│   │   │               └── zoom
+│   │   │                   ├── plugin.js
+│   │   │                   ├── zoom.esm.js
+│   │   │                   └── zoom.js
+│   │   ├── profile.png
+│   │   ├── r4r-bc.png
+│   │   ├── simulating-numbers.html
+│   │   ├── simulating-numbers.qmd
+│   │   ├── simulating-numbers_files
+│   │   │   └── libs
+│   │   │       ├── clipboard
+│   │   │       │   └── clipboard.min.js
+│   │   │       ├── quarto-html
+│   │   │       │   ├── light-border.css
+│   │   │       │   ├── popper.min.js
+│   │   │       │   ├── quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css
+│   │   │       │   ├── quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css
+│   │   │       │   ├── tabby.min.js
+│   │   │       │   ├── tippy.css
+│   │   │       │   └── tippy.umd.min.js
+│   │   │       └── revealjs
+│   │   │           ├── dist
+│   │   │           │   ├── reset.css
+│   │   │           │   ├── reveal.css
+│   │   │           │   ├── reveal.esm.js
+│   │   │           │   ├── reveal.esm.js.map
+│   │   │           │   ├── reveal.js
+│   │   │           │   ├── reveal.js.map
+│   │   │           │   └── theme
+│   │   │           │       ├── fonts
+│   │   │           │       │   ├── league-gothic
+│   │   │           │       │   │   ├── LICENSE
+│   │   │           │       │   │   ├── league-gothic.css
+│   │   │           │       │   │   ├── league-gothic.eot
+│   │   │           │       │   │   ├── league-gothic.ttf
+│   │   │           │       │   │   └── league-gothic.woff
+│   │   │           │       │   └── source-sans-pro
+│   │   │           │       │       ├── LICENSE
+│   │   │           │       │       ├── source-sans-pro-italic.eot
+│   │   │           │       │       ├── source-sans-pro-italic.ttf
+│   │   │           │       │       ├── source-sans-pro-italic.woff
+│   │   │           │       │       ├── source-sans-pro-regular.eot
+│   │   │           │       │       ├── source-sans-pro-regular.ttf
+│   │   │           │       │       ├── source-sans-pro-regular.woff
+│   │   │           │       │       ├── source-sans-pro-semibold.eot
+│   │   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │   │           │       │       ├── source-sans-pro-semibold.woff
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │   │           │       │       └── source-sans-pro.css
+│   │   │           │       ├── quarto-5b48f34d633aed70c74c672477009ffc.css
+│   │   │           │       └── quarto-bbe7401fe57d4b791b917637bb662036.css
+│   │   │           └── plugin
+│   │   │               ├── highlight
+│   │   │               │   ├── highlight.esm.js
+│   │   │               │   ├── highlight.js
+│   │   │               │   ├── monokai.css
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── zenburn.css
+│   │   │               ├── markdown
+│   │   │               │   ├── markdown.esm.js
+│   │   │               │   ├── markdown.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── math
+│   │   │               │   ├── katex.js
+│   │   │               │   ├── math.esm.js
+│   │   │               │   ├── math.js
+│   │   │               │   ├── mathjax2.js
+│   │   │               │   ├── mathjax3.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── notes
+│   │   │               │   ├── notes.esm.js
+│   │   │               │   ├── notes.js
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── speaker-view.html
+│   │   │               ├── pdf-export
+│   │   │               │   ├── pdfexport.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-line-highlight
+│   │   │               │   ├── line-highlight.css
+│   │   │               │   ├── line-highlight.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-support
+│   │   │               │   ├── footer.css
+│   │   │               │   ├── plugin.yml
+│   │   │               │   └── support.js
+│   │   │               ├── reveal-menu
+│   │   │               │   ├── menu.css
+│   │   │               │   ├── menu.js
+│   │   │               │   ├── plugin.yml
+│   │   │               │   ├── quarto-menu.css
+│   │   │               │   └── quarto-menu.js
+│   │   │               ├── search
+│   │   │               │   ├── plugin.js
+│   │   │               │   ├── search.esm.js
+│   │   │               │   └── search.js
+│   │   │               └── zoom
+│   │   │                   ├── plugin.js
+│   │   │                   ├── zoom.esm.js
+│   │   │                   └── zoom.js
+│   │   ├── stay-out.jpeg
+│   │   ├── style.css
+│   │   ├── tutor-intro.html
+│   │   ├── tutor-intro.qmd
+│   │   ├── tutor-intro_files
+│   │   │   └── libs
+│   │   │       ├── clipboard
+│   │   │       │   └── clipboard.min.js
+│   │   │       ├── quarto-html
+│   │   │       │   ├── light-border.css
+│   │   │       │   ├── popper.min.js
+│   │   │       │   ├── quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css
+│   │   │       │   ├── quarto-syntax-highlighting-dark-7271f29f9498218151f3120baddb7363.css
+│   │   │       │   ├── tabby.min.js
+│   │   │       │   ├── tippy.css
+│   │   │       │   └── tippy.umd.min.js
+│   │   │       └── revealjs
+│   │   │           ├── dist
+│   │   │           │   ├── reset.css
+│   │   │           │   ├── reveal.css
+│   │   │           │   ├── reveal.esm.js
+│   │   │           │   ├── reveal.esm.js.map
+│   │   │           │   ├── reveal.js
+│   │   │           │   ├── reveal.js.map
+│   │   │           │   └── theme
+│   │   │           │       ├── fonts
+│   │   │           │       │   ├── league-gothic
+│   │   │           │       │   │   ├── LICENSE
+│   │   │           │       │   │   ├── league-gothic.css
+│   │   │           │       │   │   ├── league-gothic.eot
+│   │   │           │       │   │   ├── league-gothic.ttf
+│   │   │           │       │   │   └── league-gothic.woff
+│   │   │           │       │   └── source-sans-pro
+│   │   │           │       │       ├── LICENSE
+│   │   │           │       │       ├── source-sans-pro-italic.eot
+│   │   │           │       │       ├── source-sans-pro-italic.ttf
+│   │   │           │       │       ├── source-sans-pro-italic.woff
+│   │   │           │       │       ├── source-sans-pro-regular.eot
+│   │   │           │       │       ├── source-sans-pro-regular.ttf
+│   │   │           │       │       ├── source-sans-pro-regular.woff
+│   │   │           │       │       ├── source-sans-pro-semibold.eot
+│   │   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │   │           │       │       ├── source-sans-pro-semibold.woff
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │   │           │       │       └── source-sans-pro.css
+│   │   │           │       ├── quarto-068227b0d8868448a1a2709d6e7f5663.css
+│   │   │           │       ├── quarto-226ed3c72bfd61863303a8d54728a120.css
+│   │   │           │       ├── quarto-37e33c7fd5cc18d8f701aa2e9bb826ce.css
+│   │   │           │       ├── quarto-6be0ff7157fc16852616b00855d08544.css
+│   │   │           │       ├── quarto-8fdde7cabfcc69ccadd1417826581427.css
+│   │   │           │       ├── quarto-a4d0b8bc80fdc8a3d4f7e85676168896.css
+│   │   │           │       ├── quarto-a7ae102ff4c0744d6025bcfd63e1c29a.css
+│   │   │           │       └── quarto-c2204bade40a765dc4872cb3627aba86.css
+│   │   │           └── plugin
+│   │   │               ├── highlight
+│   │   │               │   ├── highlight.esm.js
+│   │   │               │   ├── highlight.js
+│   │   │               │   ├── monokai.css
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── zenburn.css
+│   │   │               ├── markdown
+│   │   │               │   ├── markdown.esm.js
+│   │   │               │   ├── markdown.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── math
+│   │   │               │   ├── katex.js
+│   │   │               │   ├── math.esm.js
+│   │   │               │   ├── math.js
+│   │   │               │   ├── mathjax2.js
+│   │   │               │   ├── mathjax3.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── notes
+│   │   │               │   ├── notes.esm.js
+│   │   │               │   ├── notes.js
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── speaker-view.html
+│   │   │               ├── pdf-export
+│   │   │               │   ├── pdfexport.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-line-highlight
+│   │   │               │   ├── line-highlight.css
+│   │   │               │   ├── line-highlight.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-support
+│   │   │               │   ├── footer.css
+│   │   │               │   ├── plugin.yml
+│   │   │               │   └── support.js
+│   │   │               ├── reveal-menu
+│   │   │               │   ├── menu.css
+│   │   │               │   ├── menu.js
+│   │   │               │   ├── plugin.yml
+│   │   │               │   ├── quarto-menu.css
+│   │   │               │   └── quarto-menu.js
+│   │   │               ├── search
+│   │   │               │   ├── plugin.js
+│   │   │               │   ├── search.esm.js
+│   │   │               │   └── search.js
+│   │   │               └── zoom
+│   │   │                   ├── plugin.js
+│   │   │                   ├── zoom.esm.js
+│   │   │                   └── zoom.js
+│   │   ├── variables.html
+│   │   ├── variables.qmd
+│   │   ├── variables_files
+│   │   │   └── libs
+│   │   │       ├── clipboard
+│   │   │       │   └── clipboard.min.js
+│   │   │       ├── quarto-html
+│   │   │       │   ├── light-border.css
+│   │   │       │   ├── popper.min.js
+│   │   │       │   ├── quarto-html.min.css
+│   │   │       │   ├── quarto-syntax-highlighting-dark.css
+│   │   │       │   ├── tabby.min.js
+│   │   │       │   ├── tippy.css
+│   │   │       │   └── tippy.umd.min.js
+│   │   │       └── revealjs
+│   │   │           ├── dist
+│   │   │           │   ├── reset.css
+│   │   │           │   ├── reveal.css
+│   │   │           │   ├── reveal.esm.js
+│   │   │           │   ├── reveal.esm.js.map
+│   │   │           │   ├── reveal.js
+│   │   │           │   ├── reveal.js.map
+│   │   │           │   └── theme
+│   │   │           │       ├── fonts
+│   │   │           │       │   ├── league-gothic
+│   │   │           │       │   │   ├── LICENSE
+│   │   │           │       │   │   ├── league-gothic.css
+│   │   │           │       │   │   ├── league-gothic.eot
+│   │   │           │       │   │   ├── league-gothic.ttf
+│   │   │           │       │   │   └── league-gothic.woff
+│   │   │           │       │   └── source-sans-pro
+│   │   │           │       │       ├── LICENSE
+│   │   │           │       │       ├── source-sans-pro-italic.eot
+│   │   │           │       │       ├── source-sans-pro-italic.ttf
+│   │   │           │       │       ├── source-sans-pro-italic.woff
+│   │   │           │       │       ├── source-sans-pro-regular.eot
+│   │   │           │       │       ├── source-sans-pro-regular.ttf
+│   │   │           │       │       ├── source-sans-pro-regular.woff
+│   │   │           │       │       ├── source-sans-pro-semibold.eot
+│   │   │           │       │       ├── source-sans-pro-semibold.ttf
+│   │   │           │       │       ├── source-sans-pro-semibold.woff
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.eot
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │   │           │       │       ├── source-sans-pro-semibolditalic.woff
+│   │   │           │       │       └── source-sans-pro.css
+│   │   │           │       └── quarto.css
+│   │   │           └── plugin
+│   │   │               ├── highlight
+│   │   │               │   ├── highlight.esm.js
+│   │   │               │   ├── highlight.js
+│   │   │               │   ├── monokai.css
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── zenburn.css
+│   │   │               ├── markdown
+│   │   │               │   ├── markdown.esm.js
+│   │   │               │   ├── markdown.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── math
+│   │   │               │   ├── katex.js
+│   │   │               │   ├── math.esm.js
+│   │   │               │   ├── math.js
+│   │   │               │   ├── mathjax2.js
+│   │   │               │   ├── mathjax3.js
+│   │   │               │   └── plugin.js
+│   │   │               ├── notes
+│   │   │               │   ├── notes.esm.js
+│   │   │               │   ├── notes.js
+│   │   │               │   ├── plugin.js
+│   │   │               │   └── speaker-view.html
+│   │   │               ├── pdf-export
+│   │   │               │   ├── pdfexport.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-line-highlight
+│   │   │               │   ├── line-highlight.css
+│   │   │               │   ├── line-highlight.js
+│   │   │               │   └── plugin.yml
+│   │   │               ├── quarto-support
+│   │   │               │   ├── footer.css
+│   │   │               │   ├── plugin.yml
+│   │   │               │   └── support.js
+│   │   │               ├── reveal-chalkboard
+│   │   │               │   ├── README.md
+│   │   │               │   ├── font-awesome
+│   │   │               │   │   ├── LICENSE.txt
+│   │   │               │   │   ├── css
+│   │   │               │   │   │   ├── all.css
+│   │   │               │   │   │   ├── brands.css
+│   │   │               │   │   │   ├── fontawesome.css
+│   │   │               │   │   │   ├── regular.css
+│   │   │               │   │   │   ├── solid.css
+│   │   │               │   │   │   ├── svg-with-js.css
+│   │   │               │   │   │   ├── v4-shims.css
+│   │   │               │   │   │   └── v4-shims.min.css
+│   │   │               │   │   └── webfonts
+│   │   │               │   │       ├── fa-brands-400.eot
+│   │   │               │   │       ├── fa-brands-400.svg
+│   │   │               │   │       ├── fa-brands-400.ttf
+│   │   │               │   │       ├── fa-brands-400.woff
+│   │   │               │   │       ├── fa-brands-400.woff2
+│   │   │               │   │       ├── fa-regular-400.eot
+│   │   │               │   │       ├── fa-regular-400.svg
+│   │   │               │   │       ├── fa-regular-400.ttf
+│   │   │               │   │       ├── fa-regular-400.woff
+│   │   │               │   │       ├── fa-regular-400.woff2
+│   │   │               │   │       ├── fa-solid-900.eot
+│   │   │               │   │       ├── fa-solid-900.svg
+│   │   │               │   │       ├── fa-solid-900.ttf
+│   │   │               │   │       ├── fa-solid-900.woff
+│   │   │               │   │       └── fa-solid-900.woff2
+│   │   │               │   ├── img
+│   │   │               │   │   ├── blackboard.png
+│   │   │               │   │   ├── boardmarker-black.png
+│   │   │               │   │   ├── boardmarker-blue.png
+│   │   │               │   │   ├── boardmarker-green.png
+│   │   │               │   │   ├── boardmarker-orange.png
+│   │   │               │   │   ├── boardmarker-purple.png
+│   │   │               │   │   ├── boardmarker-red.png
+│   │   │               │   │   ├── boardmarker-yellow.png
+│   │   │               │   │   ├── chalk-blue.png
+│   │   │               │   │   ├── chalk-green.png
+│   │   │               │   │   ├── chalk-orange.png
+│   │   │               │   │   ├── chalk-purple.png
+│   │   │               │   │   ├── chalk-red.png
+│   │   │               │   │   ├── chalk-white.png
+│   │   │               │   │   ├── chalk-yellow.png
+│   │   │               │   │   ├── sponge.png
+│   │   │               │   │   └── whiteboard.png
+│   │   │               │   ├── plugin.js
+│   │   │               │   ├── plugin.yml
+│   │   │               │   └── style.css
+│   │   │               ├── reveal-menu
+│   │   │               │   ├── menu.css
+│   │   │               │   ├── menu.js
+│   │   │               │   ├── plugin.yml
+│   │   │               │   ├── quarto-menu.css
+│   │   │               │   └── quarto-menu.js
+│   │   │               ├── search
+│   │   │               │   ├── plugin.js
+│   │   │               │   ├── search.esm.js
+│   │   │               │   └── search.js
+│   │   │               └── zoom
+│   │   │                   ├── plugin.js
+│   │   │                   ├── zoom.esm.js
+│   │   │                   └── zoom.js
+│   │   ├── workflow-I.html
+│   │   ├── workflow-I.qmd
+│   │   └── workflow-I_files
+│   │       └── libs
+│   │           ├── clipboard
+│   │           │   └── clipboard.min.js
+│   │           ├── quarto-html
+│   │           │   ├── light-border.css
+│   │           │   ├── popper.min.js
+│   │           │   ├── quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css
+│   │           │   ├── tabby.min.js
+│   │           │   ├── tippy.css
+│   │           │   └── tippy.umd.min.js
+│   │           └── revealjs
+│   │               ├── dist
+│   │               │   ├── reset.css
+│   │               │   ├── reveal.css
+│   │               │   ├── reveal.esm.js
+│   │               │   ├── reveal.esm.js.map
+│   │               │   ├── reveal.js
+│   │               │   ├── reveal.js.map
+│   │               │   └── theme
+│   │               │       ├── fonts
+│   │               │       │   ├── league-gothic
+│   │               │       │   │   ├── LICENSE
+│   │               │       │   │   ├── league-gothic.css
+│   │               │       │   │   ├── league-gothic.eot
+│   │               │       │   │   ├── league-gothic.ttf
+│   │               │       │   │   └── league-gothic.woff
+│   │               │       │   └── source-sans-pro
+│   │               │       │       ├── LICENSE
+│   │               │       │       ├── source-sans-pro-italic.eot
+│   │               │       │       ├── source-sans-pro-italic.ttf
+│   │               │       │       ├── source-sans-pro-italic.woff
+│   │               │       │       ├── source-sans-pro-regular.eot
+│   │               │       │       ├── source-sans-pro-regular.ttf
+│   │               │       │       ├── source-sans-pro-regular.woff
+│   │               │       │       ├── source-sans-pro-semibold.eot
+│   │               │       │       ├── source-sans-pro-semibold.ttf
+│   │               │       │       ├── source-sans-pro-semibold.woff
+│   │               │       │       ├── source-sans-pro-semibolditalic.eot
+│   │               │       │       ├── source-sans-pro-semibolditalic.ttf
+│   │               │       │       ├── source-sans-pro-semibolditalic.woff
+│   │               │       │       └── source-sans-pro.css
+│   │               │       └── quarto-39d1eab08b8faec97b8adc39508066ea.css
+│   │               └── plugin
+│   │                   ├── highlight
+│   │                   │   ├── highlight.esm.js
+│   │                   │   ├── highlight.js
+│   │                   │   ├── monokai.css
+│   │                   │   ├── plugin.js
+│   │                   │   └── zenburn.css
+│   │                   ├── markdown
+│   │                   │   ├── markdown.esm.js
+│   │                   │   ├── markdown.js
+│   │                   │   └── plugin.js
+│   │                   ├── math
+│   │                   │   ├── katex.js
+│   │                   │   ├── math.esm.js
+│   │                   │   ├── math.js
+│   │                   │   ├── mathjax2.js
+│   │                   │   ├── mathjax3.js
+│   │                   │   └── plugin.js
+│   │                   ├── notes
+│   │                   │   ├── notes.esm.js
+│   │                   │   ├── notes.js
+│   │                   │   ├── plugin.js
+│   │                   │   └── speaker-view.html
+│   │                   ├── pdf-export
+│   │                   │   ├── pdfexport.js
+│   │                   │   └── plugin.yml
+│   │                   ├── quarto-line-highlight
+│   │                   │   ├── line-highlight.css
+│   │                   │   ├── line-highlight.js
+│   │                   │   └── plugin.yml
+│   │                   ├── quarto-support
+│   │                   │   ├── footer.css
+│   │                   │   ├── plugin.yml
+│   │                   │   └── support.js
+│   │                   ├── reveal-menu
+│   │                   │   ├── menu.css
+│   │                   │   ├── menu.js
+│   │                   │   ├── plugin.yml
+│   │                   │   ├── quarto-menu.css
+│   │                   │   └── quarto-menu.js
+│   │                   ├── search
+│   │                   │   ├── plugin.js
+│   │                   │   ├── search.esm.js
+│   │                   │   └── search.js
+│   │                   └── zoom
+│   │                       ├── plugin.js
+│   │                       ├── zoom.esm.js
+│   │                       └── zoom.js
+│   └── thesis-analysis
+│       ├── 01-packages.R
+│       ├── 02-ifelse-control-structure.R
+│       └── 03-data-analysis.R
+├── r4r-II
+│   ├── curriculum
+│   │   ├── curriculum.pdf
+│   │   └── curriculum.qmd
+│   ├── data
+│   │   ├── Index
+│   │   ├── adult.zip
+│   │   ├── adult_names
+│   │   │   ├── adult.data
+│   │   │   ├── adult.names
+│   │   │   ├── adult.test
+│   │   │   ├── new-born-names.parquet
+│   │   │   └── old.adult.names
+│   │   ├── flatfiles
+│   │   │   ├── ICESCatchDataset2006-2021.csv
+│   │   │   ├── fao_wood_export_data.csv
+│   │   │   └── plot_11_tvol.txt
+│   │   └── spreadsheet
+│   │       ├── ASFIS_sp_2023.xlsx
+│   │       ├── Ch2_Timber.ods
+│   │       └── Versions_log.xlsx
+│   ├── prep-notes
+│   │   ├── data
+│   │   │   ├── Versions_log.xlsx
+│   │   │   ├── attitude.tsv
+│   │   │   ├── dbhlist_exp1012.txt
+│   │   │   ├── ecological_health_dataset.csv
+│   │   │   ├── plot_11_tvol.txt
+│   │   │   └── redpine.parquet
+│   │   ├── images
+│   │   │   └── csv-img.png
+│   │   ├── notes.pdf
+│   │   └── notes.qmd
+│   ├── r4r-II.Rproj
+│   ├── scripts
+│   │   └── 01-flatfiles.R
+│   └── slides
+│       ├── Dennis, Larsen, 21, 200
+│       ├── _extensions
+│       │   └── coatless
+│       │       └── webr
+│       │           ├── _extension.yml
+│       │           ├── qwebr-cell-elements.js
+│       │           ├── qwebr-cell-initialization.js
+│       │           ├── qwebr-compute-engine.js
+│       │           ├── qwebr-document-engine-initialization.js
+│       │           ├── qwebr-document-history.js
+│       │           ├── qwebr-document-settings.js
+│       │           ├── qwebr-document-status.js
+│       │           ├── qwebr-monaco-editor-element.js
+│       │           ├── qwebr-monaco-editor-init.html
+│       │           ├── qwebr-styling.css
+│       │           ├── qwebr-theme-switch.js
+│       │           ├── template.qmd
+│       │           └── webr.lua
+│       ├── data.html
+│       ├── data.qmd
+│       ├── data_files
+│       │   └── libs
+│       │       ├── clipboard
+│       │       │   └── clipboard.min.js
+│       │       ├── quarto-contrib
+│       │       │   └── glightbox
+│       │       │       ├── glightbox.min.css
+│       │       │       ├── glightbox.min.js
+│       │       │       └── lightbox.css
+│       │       ├── quarto-html
+│       │       │   ├── light-border.css
+│       │       │   ├── popper.min.js
+│       │       │   ├── quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css
+│       │       │   ├── quarto-syntax-highlighting-bd0f20613ab34a035844aaae9062fb4e.css
+│       │       │   ├── tabby.min.js
+│       │       │   ├── tippy.css
+│       │       │   └── tippy.umd.min.js
+│       │       └── revealjs
+│       │           ├── dist
+│       │           │   ├── reset.css
+│       │           │   ├── reveal.css
+│       │           │   ├── reveal.esm.js
+│       │           │   ├── reveal.esm.js.map
+│       │           │   ├── reveal.js
+│       │           │   ├── reveal.js.map
+│       │           │   └── theme
+│       │           │       ├── fonts
+│       │           │       │   ├── league-gothic
+│       │           │       │   │   ├── LICENSE
+│       │           │       │   │   ├── league-gothic.css
+│       │           │       │   │   ├── league-gothic.eot
+│       │           │       │   │   ├── league-gothic.ttf
+│       │           │       │   │   └── league-gothic.woff
+│       │           │       │   └── source-sans-pro
+│       │           │       │       ├── LICENSE
+│       │           │       │       ├── source-sans-pro-italic.eot
+│       │           │       │       ├── source-sans-pro-italic.ttf
+│       │           │       │       ├── source-sans-pro-italic.woff
+│       │           │       │       ├── source-sans-pro-regular.eot
+│       │           │       │       ├── source-sans-pro-regular.ttf
+│       │           │       │       ├── source-sans-pro-regular.woff
+│       │           │       │       ├── source-sans-pro-semibold.eot
+│       │           │       │       ├── source-sans-pro-semibold.ttf
+│       │           │       │       ├── source-sans-pro-semibold.woff
+│       │           │       │       ├── source-sans-pro-semibolditalic.eot
+│       │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│       │           │       │       ├── source-sans-pro-semibolditalic.woff
+│       │           │       │       └── source-sans-pro.css
+│       │           │       ├── quarto-0fde88a82f0356838740f155f1088782.css
+│       │           │       ├── quarto-2c1b5f745a11cfad616ebade4a4a7d24.css
+│       │           │       ├── quarto-39d1eab08b8faec97b8adc39508066ea.css
+│       │           │       └── quarto-7aaf31681eed659f0200bcc8fe9a56fc.css
+│       │           └── plugin
+│       │               ├── highlight
+│       │               │   ├── highlight.esm.js
+│       │               │   ├── highlight.js
+│       │               │   ├── monokai.css
+│       │               │   ├── plugin.js
+│       │               │   └── zenburn.css
+│       │               ├── markdown
+│       │               │   ├── markdown.esm.js
+│       │               │   ├── markdown.js
+│       │               │   └── plugin.js
+│       │               ├── math
+│       │               │   ├── katex.js
+│       │               │   ├── math.esm.js
+│       │               │   ├── math.js
+│       │               │   ├── mathjax2.js
+│       │               │   ├── mathjax3.js
+│       │               │   └── plugin.js
+│       │               ├── notes
+│       │               │   ├── notes.esm.js
+│       │               │   ├── notes.js
+│       │               │   ├── plugin.js
+│       │               │   └── speaker-view.html
+│       │               ├── pdf-export
+│       │               │   ├── pdfexport.js
+│       │               │   └── plugin.yml
+│       │               ├── quarto-line-highlight
+│       │               │   ├── line-highlight.css
+│       │               │   ├── line-highlight.js
+│       │               │   └── plugin.yml
+│       │               ├── quarto-support
+│       │               │   ├── footer.css
+│       │               │   ├── plugin.yml
+│       │               │   └── support.js
+│       │               ├── reveal-menu
+│       │               │   ├── menu.css
+│       │               │   ├── menu.js
+│       │               │   ├── plugin.yml
+│       │               │   ├── quarto-menu.css
+│       │               │   └── quarto-menu.js
+│       │               ├── search
+│       │               │   ├── plugin.js
+│       │               │   ├── search.esm.js
+│       │               │   └── search.js
+│       │               └── zoom
+│       │                   ├── plugin.js
+│       │                   ├── zoom.esm.js
+│       │                   └── zoom.js
+│       ├── file-formats.html
+│       ├── file-formats.qmd
+│       ├── file-formats_files
+│       │   └── libs
+│       │       ├── clipboard
+│       │       │   └── clipboard.min.js
+│       │       ├── quarto-contrib
+│       │       │   └── glightbox
+│       │       │       ├── glightbox.min.css
+│       │       │       ├── glightbox.min.js
+│       │       │       └── lightbox.css
+│       │       ├── quarto-html
+│       │       │   ├── light-border.css
+│       │       │   ├── popper.min.js
+│       │       │   ├── quarto-syntax-highlighting-bd0f20613ab34a035844aaae9062fb4e.css
+│       │       │   ├── tabby.min.js
+│       │       │   ├── tippy.css
+│       │       │   └── tippy.umd.min.js
+│       │       └── revealjs
+│       │           ├── dist
+│       │           │   ├── reset.css
+│       │           │   ├── reveal.css
+│       │           │   ├── reveal.esm.js
+│       │           │   ├── reveal.esm.js.map
+│       │           │   ├── reveal.js
+│       │           │   ├── reveal.js.map
+│       │           │   └── theme
+│       │           │       ├── fonts
+│       │           │       │   ├── league-gothic
+│       │           │       │   │   ├── LICENSE
+│       │           │       │   │   ├── league-gothic.css
+│       │           │       │   │   ├── league-gothic.eot
+│       │           │       │   │   ├── league-gothic.ttf
+│       │           │       │   │   └── league-gothic.woff
+│       │           │       │   └── source-sans-pro
+│       │           │       │       ├── LICENSE
+│       │           │       │       ├── source-sans-pro-italic.eot
+│       │           │       │       ├── source-sans-pro-italic.ttf
+│       │           │       │       ├── source-sans-pro-italic.woff
+│       │           │       │       ├── source-sans-pro-regular.eot
+│       │           │       │       ├── source-sans-pro-regular.ttf
+│       │           │       │       ├── source-sans-pro-regular.woff
+│       │           │       │       ├── source-sans-pro-semibold.eot
+│       │           │       │       ├── source-sans-pro-semibold.ttf
+│       │           │       │       ├── source-sans-pro-semibold.woff
+│       │           │       │       ├── source-sans-pro-semibolditalic.eot
+│       │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│       │           │       │       ├── source-sans-pro-semibolditalic.woff
+│       │           │       │       └── source-sans-pro.css
+│       │           │       └── quarto-7aaf31681eed659f0200bcc8fe9a56fc.css
+│       │           └── plugin
+│       │               ├── highlight
+│       │               │   ├── highlight.esm.js
+│       │               │   ├── highlight.js
+│       │               │   ├── monokai.css
+│       │               │   ├── plugin.js
+│       │               │   └── zenburn.css
+│       │               ├── markdown
+│       │               │   ├── markdown.esm.js
+│       │               │   ├── markdown.js
+│       │               │   └── plugin.js
+│       │               ├── math
+│       │               │   ├── katex.js
+│       │               │   ├── math.esm.js
+│       │               │   ├── math.js
+│       │               │   ├── mathjax2.js
+│       │               │   ├── mathjax3.js
+│       │               │   └── plugin.js
+│       │               ├── notes
+│       │               │   ├── notes.esm.js
+│       │               │   ├── notes.js
+│       │               │   ├── plugin.js
+│       │               │   └── speaker-view.html
+│       │               ├── pdf-export
+│       │               │   ├── pdfexport.js
+│       │               │   └── plugin.yml
+│       │               ├── quarto-line-highlight
+│       │               │   ├── line-highlight.css
+│       │               │   ├── line-highlight.js
+│       │               │   └── plugin.yml
+│       │               ├── quarto-support
+│       │               │   ├── footer.css
+│       │               │   ├── plugin.yml
+│       │               │   └── support.js
+│       │               ├── reveal-menu
+│       │               │   ├── menu.css
+│       │               │   ├── menu.js
+│       │               │   ├── plugin.yml
+│       │               │   ├── quarto-menu.css
+│       │               │   └── quarto-menu.js
+│       │               ├── search
+│       │               │   ├── plugin.js
+│       │               │   ├── search.esm.js
+│       │               │   └── search.js
+│       │               └── zoom
+│       │                   ├── plugin.js
+│       │                   ├── zoom.esm.js
+│       │                   └── zoom.js
+│       ├── images
+│       │   ├── data-formats.png
+│       │   ├── dt-source-white.png
+│       │   ├── dt-source.png
+│       │   ├── favicon.png
+│       │   ├── file-format-breakdown.jpg
+│       │   ├── file-format.png
+│       │   ├── file-types-2.png
+│       │   ├── file-types-2.png.png
+│       │   ├── file-types.png
+│       │   ├── formats.png
+│       │   ├── ices-data.png
+│       │   ├── nrum.png
+│       │   ├── open-mateo.png
+│       │   ├── r-data-sources.png
+│       │   ├── sage.png
+│       │   ├── uj.jpeg
+│       │   ├── uk-forest-stats.png
+│       │   ├── venessa.jpg
+│       │   └── wikipedia.png
+│       ├── intro.html
+│       ├── intro.qmd
+│       ├── intro_files
+│       │   └── libs
+│       │       ├── clipboard
+│       │       │   └── clipboard.min.js
+│       │       ├── quarto-html
+│       │       │   ├── light-border.css
+│       │       │   ├── popper.min.js
+│       │       │   ├── quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css
+│       │       │   ├── quarto-syntax-highlighting-bd0f20613ab34a035844aaae9062fb4e.css
+│       │       │   ├── tabby.min.js
+│       │       │   ├── tippy.css
+│       │       │   └── tippy.umd.min.js
+│       │       └── revealjs
+│       │           ├── dist
+│       │           │   ├── reset.css
+│       │           │   ├── reveal.css
+│       │           │   ├── reveal.esm.js
+│       │           │   ├── reveal.esm.js.map
+│       │           │   ├── reveal.js
+│       │           │   ├── reveal.js.map
+│       │           │   └── theme
+│       │           │       ├── fonts
+│       │           │       │   ├── league-gothic
+│       │           │       │   │   ├── LICENSE
+│       │           │       │   │   ├── league-gothic.css
+│       │           │       │   │   ├── league-gothic.eot
+│       │           │       │   │   ├── league-gothic.ttf
+│       │           │       │   │   └── league-gothic.woff
+│       │           │       │   └── source-sans-pro
+│       │           │       │       ├── LICENSE
+│       │           │       │       ├── source-sans-pro-italic.eot
+│       │           │       │       ├── source-sans-pro-italic.ttf
+│       │           │       │       ├── source-sans-pro-italic.woff
+│       │           │       │       ├── source-sans-pro-regular.eot
+│       │           │       │       ├── source-sans-pro-regular.ttf
+│       │           │       │       ├── source-sans-pro-regular.woff
+│       │           │       │       ├── source-sans-pro-semibold.eot
+│       │           │       │       ├── source-sans-pro-semibold.ttf
+│       │           │       │       ├── source-sans-pro-semibold.woff
+│       │           │       │       ├── source-sans-pro-semibolditalic.eot
+│       │           │       │       ├── source-sans-pro-semibolditalic.ttf
+│       │           │       │       ├── source-sans-pro-semibolditalic.woff
+│       │           │       │       └── source-sans-pro.css
+│       │           │       ├── quarto-39d1eab08b8faec97b8adc39508066ea.css
+│       │           │       └── quarto-7aaf31681eed659f0200bcc8fe9a56fc.css
+│       │           └── plugin
+│       │               ├── highlight
+│       │               │   ├── highlight.esm.js
+│       │               │   ├── highlight.js
+│       │               │   ├── monokai.css
+│       │               │   ├── plugin.js
+│       │               │   └── zenburn.css
+│       │               ├── markdown
+│       │               │   ├── markdown.esm.js
+│       │               │   ├── markdown.js
+│       │               │   └── plugin.js
+│       │               ├── math
+│       │               │   ├── katex.js
+│       │               │   ├── math.esm.js
+│       │               │   ├── math.js
+│       │               │   ├── mathjax2.js
+│       │               │   ├── mathjax3.js
+│       │               │   └── plugin.js
+│       │               ├── notes
+│       │               │   ├── notes.esm.js
+│       │               │   ├── notes.js
+│       │               │   ├── plugin.js
+│       │               │   └── speaker-view.html
+│       │               ├── pdf-export
+│       │               │   ├── pdfexport.js
+│       │               │   └── plugin.yml
+│       │               ├── quarto-line-highlight
+│       │               │   ├── line-highlight.css
+│       │               │   ├── line-highlight.js
+│       │               │   └── plugin.yml
+│       │               ├── quarto-support
+│       │               │   ├── footer.css
+│       │               │   ├── plugin.yml
+│       │               │   └── support.js
+│       │               ├── reveal-menu
+│       │               │   ├── menu.css
+│       │               │   ├── menu.js
+│       │               │   ├── plugin.yml
+│       │               │   ├── quarto-menu.css
+│       │               │   └── quarto-menu.js
+│       │               ├── search
+│       │               │   ├── plugin.js
+│       │               │   ├── search.esm.js
+│       │               │   └── search.js
+│       │               └── zoom
+│       │                   ├── plugin.js
+│       │                   ├── zoom.esm.js
+│       │                   └── zoom.js
+│       └── styles.css
+└── style.css
