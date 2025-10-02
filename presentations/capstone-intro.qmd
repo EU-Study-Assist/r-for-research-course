@@ -1,0 +1,87 @@
+---
+title: "Capstone Project"
+subtitle: "Zama Fruit Store (ZFS)"
+format: 
+  revealjs:
+    theme: "sky"
+---
+
+## Zama Fruit Store (ZFS)
+- Qatar 🇶🇦 based fruit store. 
+- Imports a lot of fruits from five countries of the world. 
+- ZFS recently stock up on its inventory with its latest shipment. 
+
+## Fruit Import {.scrollable .smaller}
+
+Origin | Fruit |
+:------ | -----:|
+Ukraine 🇺🇦 | grapes, peach, strawberries, apples, banana |
+Nigeria 🇳🇬 | banana, coconut, apples, mango, orange, pineapple, plantain | 
+Vietnam 🇻🇳 | coconut, banana, watermelon, mango, pineapple |
+Guatemala 🇬🇹 | watermelon, mango, avocado, plantain, coconut, banana |
+Brazil 🇧🇷 | kiwi, mango, passion fruit, Pear, coconut, banana |
+
+: Fruit import and their origin {.warning tbl-colwidths="[25, 75]"}
+
+## Fruit Cost {.scrollable .smaller}
+
+Fruit | Cost ($)| 
+:---: | :---: |
+grapes 🍇 | 0.6 |
+peach 🍑 | 0.4 |
+strawberries 🍓 | 1.3 |
+apples 🍏 | 2 |
+banana 🍌 | 1.2 |
+coconut 🥥 | 2.1 |
+mango 🥭 | 2.4 |
+orange 🍊 | 1.8 |
+pineapple 🍍 | 5 |
+plantain 🌙 | 1.7 |
+pumpkin 🎃 | 0.9|
+watermelon 🍉 | 2.2 |
+avocado 🥑 | 4.2 |
+kiwi 🥝 | 3.1 |
+Pear 🍐 | 4.3 |
+
+## Testing Interface
+> visit: https://regal-cannoli-780b54.netlify.app/
+
+![](capstone-project.png){fig-align="center"}
+
+## Submission Instruction {.smaller}
+- Script Requirement
+
+```{r}
+#| eval: false
+#| echo: true
+#| include: true
+
+# ================================================
+# ZAMA FRUIT STORE CAPSTONE PROJECT
+# Student Name: [Your Full Name]
+# Course: [Course Code]
+# Submission Date: [Date]
+# ================================================
+
+# TASK I: Creating Master Fruit Inventory
+# Your code here...
+
+# TASK II: Country Specific Analysis
+# Your code here...
+
+# Continue for all tasks...
+```
+
+- **File Requirements**:
+  - Save as: *firstname_lastname_zfs_capstone.R*
+  - Example: *sarah_john_zfs_capstone.R*
+  - Use lowercase letters and underscores only (no spaces or special characters)
+  
+  
+## Submission Instruction ... {.smaller}
+
+- Submission is via email
+  - Send your completed R script to: training@eustudyassist.com
+  - Subject line: ZFS Capstone Submission - [Your Name]
+- Not Necessary
+- You'll get the correction code if you do submit
