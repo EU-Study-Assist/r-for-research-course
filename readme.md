@@ -1,1 +1,2 @@
-# GETTING DATA WITH R
+# GETTING DATA INTO R
+Learn important concepts in data importation in R
