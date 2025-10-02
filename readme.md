@@ -24,13 +24,13 @@ This repository is organized into multiple branches to separate different types 
 
 ### Topics Covered
 
-#### (Fundamentals of R Programming - r4r-I)[https://github.com/EU-Study-Assist/r-for-research-course/tree/r4r-I?tab=readme-ov-file]
+#### [Fundamentals of R Programming - r4r-I](https://github.com/EU-Study-Assist/r-for-research-course/tree/r4r-I?tab=readme-ov-file)
 - R fundamentals and syntax 
 - Functions
 - Data structures (vectors, matrices, data frames, lists)
 - Control structures and loops
 
-#### (Getting Data into R - r4r-II)[/r4r-II]
+#### [Getting Data into R - r4r-II](/r4r-II)
 - Importing flatfiles
   - txt
   - tsv
