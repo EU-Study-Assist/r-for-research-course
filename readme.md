@@ -34,7 +34,7 @@ This repository is organized into multiple branches to separate different types 
 - Importing flatfiles
   - txt
   - tsv
-  -csv
+  - csv
 - importing spreadsheets
   - MS Excel files
   - googlesheets
