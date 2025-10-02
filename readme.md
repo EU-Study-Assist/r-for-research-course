@@ -30,7 +30,7 @@ This repository is organized into multiple branches to separate different types 
 - Data structures (vectors, matrices, data frames, lists)
 - Control structures and loops
 
-#### [Getting Data into R - r4r-II](/r4r-II)
+#### [Getting Data into R - r4r-II](https://github.com/EU-Study-Assist/r-for-research-course/tree/r4r-II?tab=readme-ov-file)
 - Importing flatfiles
   - txt
   - tsv
